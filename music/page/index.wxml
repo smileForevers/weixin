@@ -1,0 +1,48 @@
+<view class="index">
+  <!--头部导航-->
+  <view class="nav" bindtap="navClick">
+    <block wx:for-items="{{item}}">
+      <navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}">{{item.name}}</navigator>
+    </block>
+  </view>
+  <!--轮播图-->
+  <view class="banner">
+    <image src="/image/banner1.jpg" alt="" ></image>
+  </view>
+  <!--次导航-->
+  <view class="sub-nav">
+    <navigator  redirect class="item1">
+      <view></view>
+      <text>私人FM</text>
+    </navigator>
+    <navigator  redirect  class="item2">
+      <view></view>
+      <text>每日歌曲推荐</text>
+    </navigator>
+    <navigator  redirect  class="item3">
+      <view></view>
+      <text>云音乐热歌榜</text>
+    </navigator>
+  </view>
+  <view class="content">
+    <block wx:for-items="{{list}}">
+      <view>
+        <view class="tit">
+          <view>
+            <image src="{{item.logo}}"></image>
+            <text>{{item.title}}</text>
+          </view>
+          <view class="more">更多</view>
+        </view>
+        <view  class="{{item.class}}">
+          <block wx:for-items="{{item.con}}" wx:for-item="con">
+            <view>
+              <image src="{{con.img}}"></image>
+              <text>{{con.text}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,120 @@
+.index {
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  flex: 1;
+  min-height: 100%;
+  font-size: 26rpx; }
+
+/*head*/
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  height: 84rpx; }
+
+.nav navigator {
+  flex: 1;
+  text-align: center;
+  line-height: 84rpx;
+  font-size: 30rpx; }
+
+.nav-hover {
+  border-bottom: 3px solid #ce3d3e;
+  box-sizing: border-box; }
+
+/*banner*/
+.banner image {
+  width: 100%;
+  height: 276rpx; }
+
+/*sub-nav*/
+.sub-nav {
+  display: flex;
+  padding-top: 40rpx;
+  padding-bottom: 14rpx; }
+  .sub-nav navigator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; }
+    .sub-nav navigator view {
+      width: 110rpx;
+      height: 110rpx;
+      background-size: cover !important; }
+    .sub-nav navigator text {
+      font-size: 26rpx;
+      line-height: 84rpx; }
+  .sub-nav .navigator-hover {
+    background-color: transparent;
+    opacity: 1; }
+
+.item1 view {
+  background-image: url(../image/sub_nav1.jpg); }
+
+.item2 view {
+  background-image: url(../image/sub_nav2.jpg); }
+
+.item3 view {
+  background-image: url(../image/sub_nav3.jpg); }
+
+.item1.navigator-hover view {
+  background: url(../image/sub_nav1_active.jpg); }
+
+.item2.navigator-hover view {
+  background: url(../image/sub_nav2_active.jpg); }
+
+.item3.navigator-hover view {
+  background: url(../image/sub_nav3_active.jpg); }
+
+/*list*/
+.content {
+  padding: 0 20rpx; }
+
+.tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; }
+  .tit text {
+    font-size: 32rpx; }
+  .tit image {
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 10rpx; }
+
+.more {
+  color: #616161;
+  position: relative;
+  padding-right: 20rpx; }
+  .more:after {
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 1px 1px 0 0;
+    border-color: #616161;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -4px; }
+
+.item {
+  display: flex;
+  padding: 20rpx 0;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .item view {
+    display: flex;
+    flex-direction: column;
+    width: 226rpx; }
+  .item text {
+    padding: 14rpx 0 28rpx;
+    line-height: 36rpx; }
+  .item image {
+    width: 226rpx;
+    height: 226rpx; }
+
+/*# sourceMappingURL=index.wxss.map */
