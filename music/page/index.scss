@@ -19,12 +19,20 @@
     flex: 1;
     min-height: 100%;
     font-size: 26rpx;
+    position:relative;
+    overflow:hidden;
 }
 /*head*/
 .nav{
     display:flex;
     flex-wrap:wrap;
+    width: 100%;
     height:84rpx;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    background: #F2F4F5;
 }
 .nav navigator{
     flex:1;
@@ -36,7 +44,13 @@
     border-bottom:3px solid #ce3d3e;
     box-sizing: border-box;
 }
-
+/*main*/
+.main{
+    box-sizing:border-box;
+    height:100%;
+    padding-top:84rpx;
+    overflow:auto;
+}
 /*banner*/
 .banner image{
     width:100%;
@@ -112,7 +126,7 @@
         @include more()
     }
 }
-.item{
+.item,.bigitem{
     display:flex;
     padding:20rpx 0;
     flex-wrap: wrap;
@@ -120,19 +134,83 @@
     view{
         display:flex;
         flex-direction:column;
-        width:226rpx;
-
 
     }
     text{
         padding:14rpx 0 28rpx;
         line-height:36rpx;
     }
+
+}
+.item{
+    view{
+        width:226rpx;
+    }
     image{
         width: 226rpx;
         height: 226rpx;
-        color:red;
     }
+}
+.bigitem{
+    view{
+        width:346rpx;
+    }
+    image{
+        width: 346rpx;
+        height: 194rpx;
+    }
+    .big-pic{
+        width:100%;
+        image{
+            width:100%;
+            height:262rpx;
+        }
+    }
+}
 
+/*play*/
+.play{
+    display:flex;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height:90rpx;
+    box-sizing:border-box;
+    background: #F2F4F5;
+    justify-content: space-between;
+    align-items: center;
+    image{
+        padding:0 15rpx;
+    }
+    .left{
+        display:flex;
+
+        image{
+            width:70rpx;
+            height:70rpx;
+        }
+    }
+    .left-txt{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        view{
+            font-size:26rpx;
+            color:#000;
+            font-family:microsoft yahei;
+        }
+        text{
+            font-size:22rpx;
+            color:#616161;
+        }
+    }
+    .right{
+        display:flex;
+        image{
+            width: 66rpx;
+            height: 66rpx;
+        }
+    }
 
 }
