@@ -106,6 +106,24 @@ Page({
                 }
             ]
         }
+    ],
+    banner:[
+        {
+            src:'/image/banner1.jpg',
+            url:''
+        },
+        {
+            src:'/image/banner2.jpg',
+            url:''
+        },
+        {
+            src:'/image/banner3.jpg',
+            url:''
+        },
+        {
+            src:'/image/banner4.jpg',
+            url:''
+        }
     ]
   },
   navClick:function(e){
@@ -123,5 +141,54 @@ Page({
       item:item
     })
 
+  },
+  onLaunch: function () {
+      console.log(1);
+      var oList=document.getElementById("list");
+      var aLi=oList.getElementsByTagName("li");
+      var iW=document.documentElement.clientWidth;
+      var aNav=document.getElementById("tabImageBtn").children;
+      var iTouchStartX=0;
+      var iStartX=0;
+      var iLeft=0;
+      var iNow=0;
+      oList.style.width=aLi.length*100+"%";
+      for(var i=0;i<aLi.length;i++)
+      {
+          aLi[i].style.width=1/aLi.length*100+"%";
+      }
+      oList.addEventListener("touchstart",fnStart,false);
+      oList.addEventListener("touchmove",fnMove,false);
+      oList.addEventListener("touchend",fnEnd,false);
+      function fnStart(ev)
+      {
+          oList.style.transition="none";
+          iTouchStartX=ev.changedTouches[0].pageX;
+          iStartX=iLeft;
+      }
+      function fnMove(ev)
+      {
+          var iDis=ev.changedTouches[0].pageX-iTouchStartX;
+          iLeft=iStartX+iDis;
+          oList.style.WebkitTransform=oList.style.transform="translateX("+iLeft+"px)";
+      }
+      function fnEnd(ev)
+      {
+          var iDis=ev.changedTouches[0].pageX-iTouchStartX;
+          if(Math.abs(iDis)>iW/2)
+          {
+              iDis>0?iNow--:iNow++;
+              if(iNow<0)iNow=0;
+              if(iNow>=aNav.length)iNow=aNav.length-1;
+          }
+          iLeft=-iNow*iW;
+          oList.style.transition=".3s";
+          oList.style.WebkitTransform=oList.style.transform="translateX("+iLeft+"px)";
+          for(var i=0;i<aNav.length;i++)
+          {
+              aNav[i].className="";
+          }
+          aNav[iNow].className="active";
+      }
   }
 });

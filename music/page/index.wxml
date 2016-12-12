@@ -7,8 +7,21 @@
   </view>
   <view class="main">
     <!--轮播图-->
-    <view class="banner">
-      <image src="/image/banner1.jpg" alt="" ></image>
+    <view id="tabImage">
+      <view id="list" class="list">
+        <block wx:for-items="{{banner}}">
+          <view>
+            <navigitor >
+              <image src="{{item.src}}" />
+            </navigitor>
+          </view>
+        </block>
+      </view>
+      <view id="tabImageBtn">
+        <!--<block wx:for-items="{{banner}}">-->
+          <navigitor  class="active"></navigitor>
+        <!--</block>-->
+      </view>
     </view>
     <!--次导航-->
     <view class="sub-nav">
