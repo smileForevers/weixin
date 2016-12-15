@@ -1,4 +1,5 @@
 var appInstance = getApp();
+var bsurl=require('../../../utils/bsurl.js');
 var common = require('../../../utils/util.js');
 Page({
   data: {
@@ -9,7 +10,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'https://n.sqaiyan.com/album?id=' + options.pid,
+      url: bsurl+'album?id=' + options.pid,
       success: function (res) {
         var re=res.data.album;
         re.publishTime=common.formatTime(re.publishTime)
@@ -17,7 +18,7 @@ Page({
           result:re
         });
         wx.setNavigationBarTitle({
-          title: res.data.name
+          title: res.data.album.name
         })
       }, fail: function (res) {
         wx.navigateBack({
@@ -31,10 +32,10 @@ Page({
       curplay: appInstance.globalData.curplay.id
     })
   },
-  userplaylist:function(e){
+  artlist:function(e){
     var userid=e.currentTarget.dataset.userid;
     wx.redirectTo({
-      url: '../index?id='+userid
+      url: '../artist/index?id='+userid
     })
   },
   playall: function (event) {
@@ -55,6 +56,7 @@ Page({
     appInstance.globalData.curplay = music;
     appInstance.globalData.index_am = index;//event.currentTarget.dataset.idx;
     appInstance.globalData.playtype = 1;
+    appInstance.globalData.globalStop=false;
     var shuffle = appInstance.globalData.shuffle;
     appInstance.globalData.list_sf = list;//this.data.list.tracks;
     appInstance.shuffleplay(shuffle);

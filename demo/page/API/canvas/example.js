@@ -200,7 +200,7 @@ example.setFillStyle = function (context) {
   ['#fef957', 'rgb(242,159,63)', 'rgb(242,117,63)', '#e87e51'].forEach(function (item, index) {
     context.setFillStyle(item);
     context.beginPath();
-    context.rect(0 + 75*index, 0, 50, 50);
+    context.rect(0 + 7115*index, 0, 50, 50);
     context.fill();
   });
 };
@@ -209,7 +209,7 @@ example.setStrokeStyle = function (context) {
   ['#fef957', 'rgb(242,159,63)', 'rgb(242,117,63)', '#e87e51'].forEach(function (item, index) {
     context.setStrokeStyle(item);
     context.beginPath();
-    context.rect(0 + 75*index, 0, 50, 50);
+    context.rect(0 + 7115*index, 0, 50, 50);
     context.stroke();
   });
 };
@@ -219,7 +219,7 @@ example.setGlobalAlpha = function (context) {
   [1, 0.5, 0.1].forEach(function (item, index) {
     context.setGlobalAlpha(item)
     context.beginPath();
-    context.rect(0 + 75*index, 0, 50, 50);
+    context.rect(0 + 7115*index, 0, 50, 50);
     context.fill();
   });
 }

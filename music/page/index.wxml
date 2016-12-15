@@ -7,21 +7,30 @@
   </view>
   <view class="main">
     <!--轮播图-->
-    <view id="tabImage">
-      <view id="list" class="list">
-        <block wx:for-items="{{banner}}">
-          <view>
-            <navigitor >
-              <image src="{{item.src}}" />
-            </navigitor>
-          </view>
-        </block>
-      </view>
-      <view id="tabImageBtn">
+    <view class="banner">
+      <!--<scroll-view class="scroll-view_H" scroll-x="true">-->
         <!--<block wx:for-items="{{banner}}">-->
-          <navigitor  class="active"></navigitor>
+            <!--<navigator id="{{item.id}}" class="scroll-view-item_H" >-->
+              <!--<image src="{{item.src}}" />-->
+            <!--</navigator>-->
         <!--</block>-->
-      </view>
+      <!--</scroll-view>-->
+      <!--<view class="bannerBtn">-->
+        <!--<block wx:for-items="{{banner}}">-->
+          <!--<navigator  class="{{item.on ? 'active' : '' }}"></navigator>-->
+        <!--</block>-->
+      <!--</view>-->
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+              autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{banner}}">
+          <swiper-item>
+            <navigator id="{{item.id}}" class="scroll-view-item_H" >
+              <image src="{{item.src}}" />
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+
     </view>
     <!--次导航-->
     <view class="sub-nav">
