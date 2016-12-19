@@ -1,8 +1,10 @@
-Page({
-    onLoad: function(options) {
-        console.log(options)
-        this.setData({
-            title: options.title
-        })
+var tmp = new Date();
+
+function f() {
+    console.log(tmp);
+    if (false) {
+        var tmp = "hello world";
     }
-})
+}
+
+f(); // undefined

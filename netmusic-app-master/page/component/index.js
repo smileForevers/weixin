@@ -7,15 +7,13 @@ Page({
   onLoad: function (options) {
     var id=options.id||'177018'
     var that = this
+    console.log(bsurl)
     wx.request({
-      url: bsurl+'userplaylists?id='+id,
+      url: bsurl,
       success: function (res) {
+        var playlist=res.data.jsonData.dataList
         that.setData({
-          list: res.data.playlist,
-          user: res.data.playlist[0].creator
-        });
-        wx.setNavigationBarTitle({
-          title: res.data.playlist[0].creator.nickname
+          list: playlist
         })
       }
     });
