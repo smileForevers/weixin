@@ -1,0 +1,1 @@
+module.exports = "http://lijin.yaqoo.com.cn/music_list.json"
