@@ -15,6 +15,9 @@ function formatTime(time) {
   }).join(':')
 }
 
+
 module.exports = {
+
   formatTime: formatTime
+
 }

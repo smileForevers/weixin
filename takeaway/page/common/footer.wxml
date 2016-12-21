@@ -1,0 +1,26 @@
+<template name="footer">
+	<view class="page-footer">
+		<block wx:for="{{footer}}" wx:key="item.id">
+			<navigator class="{{item.class}}" wx:if="{{item.id==3}}">
+				aa
+			</navigator>
+			<navigator class="{{item.class}}" wx:else>
+				<image src="{{item.on ? item.imageActive:item.image}}"></image>
+				<text>{{item.text}}</text>
+			</navigator>
+		</block>
+		<!--<navigator>-->
+			<!--<image src="../image/index.jpg"></image>-->
+			<!--<text>首页</text>-->
+		<!--</navigator><navigator>-->
+		<!--<image src="../image/index.jpg"></image>-->
+		<!--<text>首页</text>-->
+	<!--</navigator><navigator>-->
+		<!--<image src="../image/index.jpg"></image>-->
+		<!--<text>首页</text>-->
+	<!--</navigator><navigator>-->
+		<!--<image src="../image/index.jpg"></image>-->
+		<!--<text>首页</text>-->
+	<!--</navigator>-->
+	</view>
+</template>
