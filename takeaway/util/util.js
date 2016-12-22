@@ -35,7 +35,7 @@ function footer(){
     },
     {
       id:3,
-      image:"../image/index.jpg",
+      image:"../image/photo.jpg",
       text:"",
       class:"item-center",
       on:false
@@ -57,7 +57,25 @@ function footer(){
     }
   ]
 }
+
+//canvas
+function canvas (){
+  const ctx = wx.createCanvasContext('myCanvas')
+  console.log(ctx);
+  ctx.arc(26, 30, 30, 0, 2 * Math.PI)
+  ctx.setFillStyle('#ffffff')
+  ctx.fill()
+  ctx.closePath()
+  ctx.beginPath()
+  ctx.arc(26, 30, 26, 0, 2 * Math.PI)
+  ctx.setFillStyle('#fa6175')
+  ctx.fill()
+  ctx.closePath()
+  ctx.draw()
+
+}
 module.exports = {
   footer:footer(),
+  canvas:canvas,
   formatTime: formatTime
 }

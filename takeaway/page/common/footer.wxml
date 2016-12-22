@@ -2,7 +2,10 @@
 	<view class="page-footer">
 		<block wx:for="{{footer}}" wx:key="item.id">
 			<navigator class="{{item.class}}" wx:if="{{item.id==3}}">
-				aa
+				<div class="canvas">
+					<canvas canvas-id="myCanvas" style="width:52px;height:62px;"/>
+					<image src="{{item.image}}"></image>
+				</div>
 			</navigator>
 			<navigator class="{{item.class}}" wx:else>
 				<image src="{{item.on ? item.imageActive:item.image}}"></image>

@@ -88,8 +88,7 @@ a {
       height: 110rpx;
       background-size: cover !important; }
     .sub-nav navigator text {
-      font-size: 26rpx;
-      line-height: 84rpx; }
+      margin-top: 5px; }
   .sub-nav .navigator-hover {
     background-color: transparent;
     opacity: 1; }

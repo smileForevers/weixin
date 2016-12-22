@@ -1,6 +1,51 @@
 <viwe class="container">
-
-
+	<view class="banner">
+		<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+		        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{banner}}">
+				<swiper-item>
+					<navigator id="{{item.id}}" class="scroll-view-item_H" >
+						<image src="{{item.src}}" />
+					</navigator>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!--次导航-->
+	<view class="sub-nav">
+		<navigator  redirect class="item1">
+			<view></view>
+			<text>蛋糕</text>
+		</navigator>
+		<navigator  redirect  class="item2">
+			<view></view>
+			<text>饼干</text>
+		</navigator>
+		<navigator  redirect  class="item3">
+			<view></view>
+			<text>面包</text>
+		</navigator>
+		<navigator  redirect class="item4">
+			<view></view>
+			<text>冰淇淋</text>
+		</navigator>
+		<navigator  redirect  class="item5">
+			<view></view>
+			<text>糖果</text>
+		</navigator>
+		<navigator  redirect  class="item6">
+			<view></view>
+			<text>果汁</text>
+		</navigator>
+		<navigator  redirect  class="item7">
+			<view></view>
+			<text>零食</text>
+		</navigator>
+		<navigator  redirect  class="item8">
+			<view></view>
+			<text>更多</text>
+		</navigator>
+	</view>
 </viwe>
 
 <!--footer-->
