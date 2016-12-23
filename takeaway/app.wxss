@@ -4,6 +4,12 @@ a {
 text {
   font-family: "microsoft yahei"; }
 
+.div {
+  height: 20rpx;
+  border-top: 1rpx solid #f3f3f3;
+  border-bottom: 1rpx solid #f3f3f3;
+  background-color: #f5f5f5; }
+
 /*footer*/
 .page-footer {
   display: flex;

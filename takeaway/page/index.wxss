@@ -1,3 +1,64 @@
+a {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+navigator {
+  font-size: 22rpx;
+  color: #a6876b; }
+
+navigator:visited {
+  color: #6a3b05; }
+
+.navigator-hover {
+  background-color: transparent;
+  opacity: 1; }
+
+text {
+  font-family: "microsoft yahei"; }
+
+.div {
+  height: 20rpx;
+  border-top: 1rpx solid #f3f3f3;
+  border-bottom: 1rpx solid #f3f3f3;
+  background-color: #f5f5f5; }
+
+/*footer*/
+.page-footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 49px;
+  justify-content: space-between;
+  background-color: #fff;
+  border-top: 2px solid #f5f5f5;
+  box-sizing: border-box; }
+  .page-footer navigator {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end; }
+  .page-footer text {
+    font-size: 12px;
+    font-family: "microsoft yahei";
+    line-height: 22px;
+    color: #561b1d; }
+  .page-footer .item image {
+    width: 20px;
+    height: 20px; }
+  .page-footer .canvas {
+    position: relative;
+    width: 52px;
+    height: 62px; }
+    .page-footer .canvas image {
+      position: absolute;
+      top: 20px;
+      left: 14px;
+      width: 25px;
+      height: 19px; }
+
 page {
   position: relative;
   overflow: hidden; }
@@ -69,9 +130,6 @@ page {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden; }
-  .sub-nav .navigator-hover {
-    background-color: transparent;
-    opacity: 1; }
 
 .item1 view {
   background-image: url(../image/index/icon1.jpg); }
@@ -118,7 +176,40 @@ page {
 .item7:active view {
   background-image: url(../image/index/icon7_active.jpg); }
 
-.item8 view:active {
+.item8:active view {
   background-image: url(../image/index/icon8_active.jpg); }
+
+.rank {
+  position: relative; }
+
+.rank-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+  height: 68rpx; }
+  .rank-nav:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    border-bottom: 1px solid #f5f5f5;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); }
+  .rank-nav navigator {
+    text-align: center;
+    line-height: 44rpx;
+    height: 44rpx; }
+  .rank-nav .nav-hover {
+    border-bottom: 3px solid #ce3d3e;
+    box-sizing: border-box; }
 
 /*# sourceMappingURL=index.wxss.map */

@@ -46,6 +46,16 @@
 			<text>更多</text>
 		</navigator>
 	</view>
+	<!--div-->
+	<view class="div"></view>
+	<!--排行-->
+	<view class="rank">
+		<view class="rank-nav" bindtap="navClick">
+			<block wx:for-items="{{item}}">
+				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}">{{item.name}}</navigator>
+			</block>
+		</view>
+	</view>
 </viwe>
 
 <!--footer-->

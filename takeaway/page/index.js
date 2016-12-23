@@ -33,19 +33,15 @@ Page({
       item: [
           {
             id: '1',
-            name: '个性推荐',
+            name: '推荐',
             open: true,
           }, {
             id: '2',
-            name: '歌单',
+            name: '热门',
             open: false,
           }, {
             id: '3',
-            name: '主播电台',
-            open: false,
-          }, {
-            id: '4',
-            name: '排行榜',
+            name: '最新',
             open: false,
           }
 
