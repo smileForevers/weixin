@@ -4,8 +4,11 @@
 //}
 //common
 a{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+navigator,text{
+  font-family:"Microsoft Yahei";
+  font-size:24rpx;
+}
 navigator{
-  font-size: 22rpx;
   color:#a6876b
 }
 navigator:visited{
@@ -15,9 +18,7 @@ navigator:visited{
   background-color: transparent;
   opacity:1;
 }
-text{
-  font-family:"microsoft yahei";
-}
+
 @mixin more{
   content: " ";
   display: inline-block;

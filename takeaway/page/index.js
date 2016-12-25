@@ -140,10 +140,10 @@ Page({
     var item = this.data.item , id = e.target.id;
     console.log(this);
     for(var i = 0,len = item.length;i<len;i++){
-      if( item[i].id == id ){
-        item[i].open = true ;
-      }else{
+      if( item[i].id != id ){
         item[i].open = false ;
+      }else{
+        item[i].open = true ;
       }
     }
 

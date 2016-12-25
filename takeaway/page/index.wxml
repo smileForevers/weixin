@@ -50,10 +50,23 @@
 	<view class="div"></view>
 	<!--排行-->
 	<view class="rank">
-		<view class="rank-nav" bindtap="navClick">
+		<view class="rank-nav" >
 			<block wx:for-items="{{item}}">
-				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}">{{item.name}}</navigator>
+				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}" bindtap="navClick">{{item.name}}</navigator>
 			</block>
+		</view>
+		<view class="rank_con">
+			<view class="recommend">
+				<view class="tit">
+					<image src="../image/index/rank_logo.jpg"></image>
+					<view class="right">
+						<text class="name">巷子里的猫</text>
+						<text class="time">5分钟前</text>
+					</view>
+				</view>
+				<view class="con"></view>
+				<view class="footer"></view>
+			</view>
 		</view>
 	</view>
 </viwe>
