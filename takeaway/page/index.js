@@ -155,6 +155,7 @@ Page({
   onLoad: function () {
     // console.log(1)
     util.canvas();
+    util.canvasArc('canvasCon','#fa6175');
 
 
   }

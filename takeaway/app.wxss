@@ -1,8 +1,19 @@
+page {
+  font-size: 24rpx;
+  font-family: "Microsoft Yahei"; }
+
 a {
   -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
 
-text {
-  font-family: "microsoft yahei"; }
+navigator {
+  color: #a6876b; }
+
+navigator:visited {
+  color: #6a3b05; }
+
+.navigator-hover {
+  background-color: transparent;
+  opacity: 1; }
 
 .div {
   height: 20rpx;

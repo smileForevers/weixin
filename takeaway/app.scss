@@ -1,13 +1,14 @@
-//test
-//page{
-//  background: green!important;
-//}
+
+page{
+  //background: green!important;
+  position: relative;
+  font-size:24rpx;
+  font-family:"Microsoft Yahei";
+  
+}
 //common
 a{-webkit-tap-highlight-color:rgba(255,0,0,0);}
-navigator,text{
-  font-family:"Microsoft Yahei";
-  font-size:24rpx;
-}
+
 navigator{
   color:#a6876b
 }
@@ -47,6 +48,11 @@ navigator:visited{
   transform-origin: 0 0;
   -webkit-transform: scaleY(.5);
   transform: scaleY(.5);
+}
+@mixin flex(){
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
 //div
 .div{

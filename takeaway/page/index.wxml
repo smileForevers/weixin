@@ -64,7 +64,48 @@
 						<text class="time">5分钟前</text>
 					</view>
 				</view>
-				<view class="con"></view>
+				<view class="con">
+					<view class="con_tit">
+						<view class="con_left">草莓奶油蛋糕</view>
+						<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="canvasCon"></canvas><text>心得</text></view>
+					</view>
+					<view class="con_img">
+						<image src="../image/index/rank_con.jpg"></image>
+						<image src="../image/index/rank_con2.jpg"></image>
+						<image src="../image/index/rank_con3.jpg"></image>
+					</view>
+					<view class="text">
+						在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。
+					</view>
+					<view class="friend">
+						<image src="../image/index/rank_f.jpg"></image>
+						<image src="../image/index/rank_f2.jpg"></image>
+						<image src="../image/index/rank_f3.jpg"></image>
+						<image src="../image/index/rank_f4.jpg"></image>
+					</view>
+				</view>
+				<view class="footer"></view>
+				<view class="tit">
+					<image src="../image/index/rank_logo.jpg"></image>
+					<view class="right">
+						<text class="name">巷子里的猫</text>
+						<text class="time">5分钟前</text>
+					</view>
+				</view>
+				<view class="con">
+					<view class="con_tit">
+						<view class="con_left">草莓奶油蛋糕</view>
+						<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="canvasCon"></canvas><text>心得</text></view>
+					</view>
+					<view class="con_img">
+						<image src="../image/index/rank_con.jpg"></image>
+						<image src="../image/index/rank_con2.jpg"></image>
+						<image src="../image/index/rank_con3.jpg"></image>
+					</view>
+					<view class="text">
+						在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。
+					</view>
+				</view>
 				<view class="footer"></view>
 			</view>
 		</view>

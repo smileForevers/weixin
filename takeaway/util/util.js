@@ -74,8 +74,19 @@ function canvas (){
   ctx.draw()
 
 }
+function canvasArc (canvas,color){
+  const ctx = wx.createCanvasContext(canvas)
+  console.log(ctx);
+  ctx.arc(6, 6, 4, 0, 2 * Math.PI)
+  ctx.setStrokeStyle(color)
+  ctx.setLineWidth(2)
+  ctx.stroke()
+  ctx.draw()
+
+}
 module.exports = {
   footer:footer(),
   canvas:canvas,
+  canvasArc:canvasArc,
   formatTime: formatTime
 }
