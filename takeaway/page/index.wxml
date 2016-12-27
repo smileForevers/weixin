@@ -57,58 +57,61 @@
 		</view>
 		<view class="rank_con">
 			<view class="recommend">
-				<view class="tit">
-					<image src="../image/index/rank_logo.jpg"></image>
-					<view class="right">
-						<text class="name">巷子里的猫</text>
-						<text class="time">5分钟前</text>
+				<block wx:for-items="{{recommend}}">
+				<view class="item">
+					<block wx:for-items="{{item.tit}}" wx:for-item="tit">
+						<view class="tit">
+							<image src="{{tit.image}}"></image>
+							<view class="right">
+								<text class="name">{{tit.name}}</text>
+								<text class="time">{{tit.time}}</text>
+							</view>
+						</view>
+					</block>
+					<block wx:for-items="{{item.con}}" wx:for-item="con">
+						<view class="con">
+							<view class="con_tit">
+								<view class="con_left">{{con.con_tit}}</view>
+								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{con.canvas_id}}"></canvas><text>{{con.canvas_text}}</text></view>
+							</view>
+							<view class="con_img">
+								<block  wx:for-items="{{con.con_img}}">
+									<image src="{{item}}"></image>
+								</block>
+							</view>
+							<view class="text">
+								{{con.text}}
+							</view>
+							<view class="friend">
+								<view class="friend_left">
+									<block  wx:for-items="{{con.friend}}">
+										<image src="{{item}}"></image>
+									</block>
+									<text>...</text>
+								</view>
+								<view class="friend_right">
+									<image src="{{con.see_img}}"></image>
+									{{con.see_num}}人看过
+								</view>
+							</view>
+						</view>
+					</block>
+					<view class="bottom">
+						<view class="bottom_left">
+							<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+							<image src="{{bottom.img}}"></image>{{bottom.txt}}
+							</block>
+						</view>
+						<view class="bottom_right">
+							<canvas canvas-id="connect" style="width: 54px;height:20px;"></canvas>
+						</view>
 					</view>
 				</view>
-				<view class="con">
-					<view class="con_tit">
-						<view class="con_left">草莓奶油蛋糕</view>
-						<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="canvasCon"></canvas><text>心得</text></view>
-					</view>
-					<view class="con_img">
-						<image src="../image/index/rank_con.jpg"></image>
-						<image src="../image/index/rank_con2.jpg"></image>
-						<image src="../image/index/rank_con3.jpg"></image>
-					</view>
-					<view class="text">
-						在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。
-					</view>
-					<view class="friend">
-						<image src="../image/index/rank_f.jpg"></image>
-						<image src="../image/index/rank_f2.jpg"></image>
-						<image src="../image/index/rank_f3.jpg"></image>
-						<image src="../image/index/rank_f4.jpg"></image>
-					</view>
-				</view>
-				<view class="footer"></view>
-				<view class="tit">
-					<image src="../image/index/rank_logo.jpg"></image>
-					<view class="right">
-						<text class="name">巷子里的猫</text>
-						<text class="time">5分钟前</text>
-					</view>
-				</view>
-				<view class="con">
-					<view class="con_tit">
-						<view class="con_left">草莓奶油蛋糕</view>
-						<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="canvasCon"></canvas><text>心得</text></view>
-					</view>
-					<view class="con_img">
-						<image src="../image/index/rank_con.jpg"></image>
-						<image src="../image/index/rank_con2.jpg"></image>
-						<image src="../image/index/rank_con3.jpg"></image>
-					</view>
-					<view class="text">
-						在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。
-					</view>
-				</view>
-				<view class="footer"></view>
+				<view class="div"></view>
+				</block>
 			</view>
 		</view>
+
 	</view>
 </viwe>
 

@@ -30,11 +30,11 @@ Page({
               url:''
           }
       ],
-      item: [
+      item:[
           {
             id: '1',
             name: '推荐',
-            open: true,
+            open: true
           }, {
             id: '2',
             name: '热门',
@@ -42,97 +42,88 @@ Page({
           }, {
             id: '3',
             name: '最新',
-            open: false,
+            open: false
           }
-
         ],
-      list:[
-            {
-            title:'推荐歌单',
-            logo:'../image/recommend.jpg',
-            class:'item',
-            con:[
-              {
-                img:'../image/list1.jpg',
-                text:'[小众华语]忘记你，不如忘记我自己'
-              },
-              {
-                img:'../image/list2.jpg',
-                text:'【电子 音瀑】魂灵飞升，破碎虚空 '
-              }
-              ,
-              {
-                img:'../image/list3.jpg',
-                text:'【守望先锋】不定更新 '
-              },
-              {
-                img:'../image/list4.jpg',
-                text:'你知道思念一个人的滋味吗'
-              },
-              {
-                img:'../image/list5.jpg',
-                text:'好似轻轻的耳语，世界突然安静下来'
-              },
-              {
-                img:'../image/list6.jpg',
-                text:'【电子 音瀑】魂灵飞升，破碎虚空'
-              }
-            ]
+      canvasArc:[
+        {
+          id:'canvasCon',
+          color:'#fa6175'
+        },{
+          id:'canvasCon2',
+          color:'#00b7f0'
+        }
+      ],
+      recommend: [
+      {
+        tit:[{
+          image:'../image/index/rank_logo.jpg',
+          name:'巷子里的猫',
+          time:'5分钟前'
+        }],
+        con:[
+          {
+            con_tit:'草莓奶油蛋糕',
+            canvas_id:'canvasCon',
+            canvas_text:'心得',
+            canvas_color:'#fa6175',
+            con_img:['../image/index/rank_con.jpg','../image/index/rank_con2.jpg','../image/index/rank_con3.jpg'],
+            text:'在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。',
+            friend:['../image/index/rank_f.jpg','../image/index/rank_f2.jpg','../image/index/rank_f3.jpg','../image/index/rank_f4.jpg'],
+            see_img:'../image/index/see.jpg',
+            see_num:'6823'
+          }
+        ],
+        bottom:[{
+          img:'../image/index/save.jpg',
+          txt:'312'
+        },
+          {
+            img:'../image/index/love.jpg',
+            txt:'675'
           },
-            {
-                title:'独家放送',
-                logo:'../image/music.jpg',
-                class:'bigitem',
-                con:[
-                    {
-                        img:'../image/biglist1.jpg',
-                        text:'音乐专栏 蓝莓之夜：打开心门，扔掉钥匙'
-                    },
-                    {
-                        img:'../image/biglist2.jpg',
-                        text:'充豪华会员 赢天籁之战入场券 '
-                    }
-                    ,
-                    {
-                        class:'big-pic',
-                        img:'../image/biglist3.jpg',
-                        text:'福利优选：口袋音符篇--入耳式耳机集结号 '
-                    }
-                ]
-            } ,
-            {
-                title:'最新音乐',
-                logo:'../image/new.jpg',
-                class:'item',
-                con:[
-                    {
-                        img:'../image/list7.jpg',
-                        text:'[小众华语]忘记你，不如忘记我自己'
-                    },
-                    {
-                        img:'../image/list8.jpg',
-                        text:'【电子 音瀑】魂灵飞升，破碎虚空 '
-                    }
-                    ,
-                    {
-                        img:'../image/list9.jpg',
-                        text:'【守望先锋】不定更新 '
-                    },
-                    {
-                        img:'../image/list10.jpg',
-                        text:'你知道思念一个人的滋味吗'
-                    },
-                    {
-                        img:'../image/list11.jpg',
-                        text:'好似轻轻的耳语，世界突然安静下来'
-                    },
-                    {
-                        img:'../image/list12.jpg',
-                        text:'【电子 音瀑】魂灵飞升，破碎虚空'
-                    }
-                ]
-            }
+          {
+            img:'../image/index/comment.jpg',
+            txt:'65'
+          }
+        ]
+      },
+      {
+        tit:[{
+          image:'../image/index/rank_logo2.jpg',
+          name:'梨子酱',
+          time:'20分钟前'
+        }],
+        con:[
+          {
+            con_tit:'草莓奶油蛋糕',
+            canvas_id:'canvasCon2',
+            canvas_text:'创作',
+            canvas_color:'#00b7f0',
+            con_img:['../image/index/rank_con4.jpg','../image/index/rank_con5.jpg','../image/index/rank_con6.jpg'],
+            text:'在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。',
+            friend:['../image/index/rank_f.jpg','../image/index/rank_f2.jpg','../image/index/rank_f3.jpg','../image/index/rank_f4.jpg'],
+            see_img:'../image/index/see.jpg',
+            see_num:'7861'
+          }
         ],
+        bottom:[{
+          img:'../image/index/save.jpg',
+          txt:'456'
+        },
+          {
+            img:'../image/index/love.jpg',
+            txt:'547'
+          },
+          {
+            img:'../image/index/comment.jpg',
+            txt:'24'
+          }
+        ]
+      }
+
+    ],
+
       footer:util.footer
 
   },
@@ -152,10 +143,24 @@ Page({
     })
 
   },
+  line:function (e) {
+    const ctx = wx.createCanvasContext('connect')
+    ctx.setLineWidth(20)
+    ctx.setStrokeStyle("#fa6175")
+    ctx.setLineCap('round')
+    ctx.moveTo(10,10)
+    ctx.lineTo(44, 10)
+    ctx.stroke()
+    ctx.setFontSize(12)
+    ctx.setFillStyle('#ffffff')
+    ctx.fillText('请教Ta', 10, 14)
+    ctx.draw()
+  },
   onLoad: function () {
-    // console.log(1)
+    console.log(this.data.canvasArc)
     util.canvas();
-    util.canvasArc('canvasCon','#fa6175');
+    util.canvasArc(this.data.canvasArc);
+    this.line()
 
 
   }

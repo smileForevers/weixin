@@ -3,17 +3,18 @@
 
 //color
 $grey:#f5f5f5;
+$grey1:#d1d1d1;
 $brown:#a6876b;
 $brown1:#6b3906;
 $pink:#fa6175;
 
-
 /*container*/
 .container{
-    box-sizing:border-box;
-    height:100%;
-    padding-bottom:84rpx;
-    overflow:auto;
+    //box-sizing:border-box;
+    //height:100%;
+    //padding-bottom:164px;
+    //overflow:auto;
+    //margin-bottom:90px;
 }
 /*banner*/
 .banner{
@@ -112,6 +113,7 @@ $pink:#fa6175;
 //rank
 .rank{
     position:relative;
+    margin-bottom:46px;
 }
 .rank-nav{
     position:absolute;
@@ -135,12 +137,14 @@ $pink:#fa6175;
     }
     .nav-hover{
         border-bottom-color: #fa6175;
-
     }
 }
 
 .rank_con{
-    padding:68rpx 50rpx;
+    padding-top:68rpx;
+    .item{
+        padding:0 50rpx;
+    }
     .tit{
         display: flex;
         padding-top:26rpx;
@@ -195,10 +199,34 @@ $pink:#fa6175;
             line-height:36rpx;
         }
         .friend{
-            image{
-                width:40rpx;
-                height:40rpx;
+            @include flex;
+            padding:20rpx 0;
+            color:$grey1;
+            .friend_left{
+                display: flex;
+                align-items: center;
+                image{
+                    width:40rpx;
+                    height:40rpx;
+                    padding-right:20rpx;
+                }
             }
+            .friend_right{
+                image{
+                    width:26rpx;
+                    height:22rpx;
+                }
+            }
+        }
+    }
+    .bottom{
+        height:82rpx;
+        @include flex();
+        color:$grey1;
+        image{
+            width:26rpx;
+            height:22rpx;
+            padding:0 14rpx;
         }
     }
 }

@@ -74,14 +74,19 @@ function canvas (){
   ctx.draw()
 
 }
-function canvasArc (canvas,color){
-  const ctx = wx.createCanvasContext(canvas)
-  console.log(ctx);
-  ctx.arc(6, 6, 4, 0, 2 * Math.PI)
-  ctx.setStrokeStyle(color)
-  ctx.setLineWidth(2)
-  ctx.stroke()
-  ctx.draw()
+function canvasArc (canvas){
+  console.log(canvas)
+  for(let i=0;i<canvas.length;i++){
+    // for(let[key,value] of canvas[i]){
+      const ctx = wx.createCanvasContext(canvas[i].id)
+      console.log(ctx);
+      ctx.arc(6, 6, 4, 0, 2 * Math.PI)
+      ctx.setStrokeStyle(canvas[i].color)
+      ctx.setLineWidth(2)
+      ctx.stroke()
+      ctx.draw()
+    // }
+  }
 
 }
 module.exports = {

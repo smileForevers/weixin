@@ -61,12 +61,6 @@ navigator:visited {
       height: 19px; }
 
 /*container*/
-.container {
-  box-sizing: border-box;
-  height: 100%;
-  padding-bottom: 84rpx;
-  overflow: auto; }
-
 /*banner*/
 .banner {
   position: relative;
@@ -157,7 +151,8 @@ navigator:visited {
   background-image: url(../image/index/icon8_active.jpg); }
 
 .rank {
-  position: relative; }
+  position: relative;
+  margin-bottom: 46px; }
 
 .rank-nav {
   position: absolute;
@@ -192,7 +187,9 @@ navigator:visited {
     border-bottom-color: #fa6175; }
 
 .rank_con {
-  padding: 68rpx 50rpx; }
+  padding-top: 68rpx; }
+  .rank_con .item {
+    padding: 0 50rpx; }
   .rank_con .tit {
     display: flex;
     padding-top: 26rpx; }
@@ -239,8 +236,31 @@ navigator:visited {
       padding-top: 14rpx;
       color: #a6876b;
       line-height: 36rpx; }
-    .rank_con .con .friend image {
-      width: 40rpx;
-      height: 40rpx; }
+    .rank_con .con .friend {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20rpx 0;
+      color: #d1d1d1; }
+      .rank_con .con .friend .friend_left {
+        display: flex;
+        align-items: center; }
+        .rank_con .con .friend .friend_left image {
+          width: 40rpx;
+          height: 40rpx;
+          padding-right: 20rpx; }
+      .rank_con .con .friend .friend_right image {
+        width: 26rpx;
+        height: 22rpx; }
+  .rank_con .bottom {
+    height: 82rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d1d1d1; }
+    .rank_con .bottom image {
+      width: 26rpx;
+      height: 22rpx;
+      padding: 0 14rpx; }
 
 /*# sourceMappingURL=index.wxss.map */
