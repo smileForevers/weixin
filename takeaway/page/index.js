@@ -56,6 +56,7 @@ Page({
       ],
       recommend: [
       {
+        tag:'pink',
         tit:[{
           image:'../image/index/rank_logo.jpg',
           name:'巷子里的猫',
@@ -89,6 +90,7 @@ Page({
         ]
       },
       {
+        tag:'blue',
         tit:[{
           image:'../image/index/rank_logo2.jpg',
           name:'梨子酱',
@@ -159,6 +161,11 @@ Page({
   onLoad: function () {
     console.log(this.data.canvasArc)
     util.canvas();
+    let canvasArc=[];
+    let data = this.data.recommend;
+    for(let i=0;i<data.length;i++){
+        let[i].id = data[i].
+    }
     util.canvasArc(this.data.canvasArc);
     this.line()
 
