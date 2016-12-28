@@ -1,10 +1,5 @@
-var tmp = new Date();
-
-function f() {
-    console.log(tmp);
-    if (false) {
-        var tmp = "hello world";
-    }
-}
-
-f(); // undefined
+<view id="outter" bindtap="handleTap1">
+    <view id="inner" >
+          inner view
+    </view>
+</view>

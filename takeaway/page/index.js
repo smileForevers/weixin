@@ -1,5 +1,5 @@
 var util = require('../util/util.js');
-console.log(util.footer)
+// console.log(util.footer)
 Page({
   data: {
       indicatorDots: false,
@@ -45,36 +45,30 @@ Page({
             open: false
           }
         ],
-      canvasArc:[
-        {
-          id:'canvasCon',
-          color:'#fa6175'
-        },{
-          id:'canvasCon2',
-          color:'#00b7f0'
-        }
-      ],
+      // canvasArc:[
+      //   {
+      //     id:'canvasCon',
+      //     color:'#fa6175'
+      //   },{
+      //     id:'canvasCon2',
+      //     color:'#00b7f0'
+      //   }
+      // ],
       recommend: [
       {
-        tag:'pink',
-        tit:[{
-          image:'../image/index/rank_logo.jpg',
-          name:'巷子里的猫',
-          time:'5分钟前'
-        }],
-        con:[
-          {
-            con_tit:'草莓奶油蛋糕',
-            canvas_id:'canvasCon',
-            canvas_text:'心得',
-            canvas_color:'#fa6175',
-            con_img:['../image/index/rank_con.jpg','../image/index/rank_con2.jpg','../image/index/rank_con3.jpg'],
-            text:'在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。',
-            friend:['../image/index/rank_f.jpg','../image/index/rank_f2.jpg','../image/index/rank_f3.jpg','../image/index/rank_f4.jpg'],
-            see_img:'../image/index/see.jpg',
-            see_num:'6823'
-          }
-        ],
+        tag:'#fa6175',
+        image:'../image/index/rank_logo.jpg',
+        name:'巷子里的猫',
+        time:'5分钟前',
+        con_tit:'草莓奶油蛋糕',
+        canvas_id:'canvasCon',
+        canvas_text:'心得',
+        canvas_color:'#fa6175',
+        con_img:['../image/index/rank_con.jpg','../image/index/rank_con2.jpg','../image/index/rank_con3.jpg'],
+        text:'在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。',
+        friend:['../image/index/rank_f.jpg','../image/index/rank_f2.jpg','../image/index/rank_f3.jpg','../image/index/rank_f4.jpg'],
+        see_img:'../image/index/see.jpg',
+        see_num:'6823',
         bottom:[{
           img:'../image/index/save.jpg',
           txt:'312'
@@ -90,25 +84,19 @@ Page({
         ]
       },
       {
-        tag:'blue',
-        tit:[{
-          image:'../image/index/rank_logo2.jpg',
-          name:'梨子酱',
-          time:'20分钟前'
-        }],
-        con:[
-          {
-            con_tit:'草莓奶油蛋糕',
-            canvas_id:'canvasCon2',
-            canvas_text:'创作',
-            canvas_color:'#00b7f0',
-            con_img:['../image/index/rank_con4.jpg','../image/index/rank_con5.jpg','../image/index/rank_con6.jpg'],
-            text:'在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。',
-            friend:['../image/index/rank_f.jpg','../image/index/rank_f2.jpg','../image/index/rank_f3.jpg','../image/index/rank_f4.jpg'],
-            see_img:'../image/index/see.jpg',
-            see_num:'7861'
-          }
-        ],
+        tag:'#00b7f0',
+        image:'../image/index/rank_logo2.jpg',
+        name:'梨子酱',
+        time:'20分钟前',
+        con_tit:'第一次做',
+        canvas_id:'canvasCon2',
+        canvas_text:'创作',
+        canvas_color:'#00b7f0',
+        con_img:['../image/index/rank_con4.jpg','../image/index/rank_con5.jpg','../image/index/rank_con6.jpg'],
+        text:'在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。',
+        friend:['../image/index/rank_f.jpg','../image/index/rank_f2.jpg','../image/index/rank_f3.jpg','../image/index/rank_f4.jpg'],
+        see_img:'../image/index/see.jpg',
+        see_num:'7861',
         bottom:[{
           img:'../image/index/save.jpg',
           txt:'456'
@@ -123,7 +111,6 @@ Page({
           }
         ]
       }
-
     ],
 
       footer:util.footer
@@ -131,7 +118,7 @@ Page({
   },
   navClick:function(e){
     var item = this.data.item , id = e.target.id;
-    console.log(this);
+    // console.log(this);
     for(var i = 0,len = item.length;i<len;i++){
       if( item[i].id != id ){
         item[i].open = false ;
@@ -159,13 +146,20 @@ Page({
     ctx.draw()
   },
   onLoad: function () {
-    console.log(this.data.canvasArc)
+
     util.canvas();
-    let canvasArc=[];
+    let canvasArc = [];
     let data = this.data.recommend;
-    for(let i=0;i<data.length;i++){
-        let[i].id = data[i].
+    for(var i=0;i<data.length;i++){
+      canvasArc[i] = {};
+      canvasArc[i].id = data[i].canvas_id;
+      canvasArc[i].color = data[i].tag;
     }
+    console.log(canvasArc)
+    this.setData({
+      canvasArc:canvasArc
+    })
+    // console.log(this.data.canvasArc)
     util.canvasArc(this.data.canvasArc);
     this.line()
 

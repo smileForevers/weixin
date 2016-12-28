@@ -59,43 +59,39 @@
 			<view class="recommend">
 				<block wx:for-items="{{recommend}}">
 				<view class="item">
-					<block wx:for-items="{{item.tit}}" wx:for-item="tit">
-						<view class="tit">
-							<image src="{{tit.image}}"></image>
-							<view class="right">
-								<text class="name">{{tit.name}}</text>
-								<text class="time">{{tit.time}}</text>
-							</view>
+					<view class="tit">
+						<image src="{{item.image}}"></image>
+						<view class="right">
+							<text class="name">{{item.name}}</text>
+							<text class="time">{{item.time}}</text>
 						</view>
-					</block>
-					<block wx:for-items="{{item.con}}" wx:for-item="con">
-						<view class="con">
-							<view class="con_tit">
-								<view class="con_left">{{con.con_tit}}</view>
-								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{con.canvas_id}}"></canvas><text>{{con.canvas_text}}</text></view>
-							</view>
-							<view class="con_img">
-								<block  wx:for-items="{{con.con_img}}">
+					</view>
+					<view class="con">
+						<view class="con_tit">
+							<view class="con_left">{{item.con_tit}}</view>
+							<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
+						</view>
+						<view class="con_img">
+							<block  wx:for-items="{{item.con_img}}">
+								<image src="{{item}}"></image>
+							</block>
+						</view>
+						<view class="text">
+							{{item.text}}
+						</view>
+						<view class="friend">
+							<view class="friend_left">
+								<block  wx:for-items="{{item.friend}}">
 									<image src="{{item}}"></image>
 								</block>
+								<text>...</text>
 							</view>
-							<view class="text">
-								{{con.text}}
-							</view>
-							<view class="friend">
-								<view class="friend_left">
-									<block  wx:for-items="{{con.friend}}">
-										<image src="{{item}}"></image>
-									</block>
-									<text>...</text>
-								</view>
-								<view class="friend_right">
-									<image src="{{con.see_img}}"></image>
-									{{con.see_num}}人看过
-								</view>
+							<view class="friend_right">
+								<image src="{{item.see_img}}"></image>
+								{{item.see_num}}人看过
 							</view>
 						</view>
-					</block>
+					</view>
 					<view class="bottom">
 						<view class="bottom_left">
 							<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">

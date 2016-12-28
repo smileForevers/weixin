@@ -61,7 +61,7 @@ function footer(){
 //canvas
 function canvas (){
   const ctx = wx.createCanvasContext('myCanvas')
-  console.log(ctx);
+  // console.log(ctx);
   ctx.arc(26, 30, 30, 0, 2 * Math.PI)
   ctx.setFillStyle('#ffffff')
   ctx.fill()
@@ -75,7 +75,7 @@ function canvas (){
 
 }
 function canvasArc (canvas){
-  console.log(canvas)
+  // console.log(canvas)
   for(let i=0;i<canvas.length;i++){
     // for(let[key,value] of canvas[i]){
       const ctx = wx.createCanvasContext(canvas[i].id)
