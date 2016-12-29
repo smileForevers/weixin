@@ -1,0 +1,3 @@
+<button bindtap="aa" style="height:50px;"></button>
+<canvas canvas-id="aa" style="width:300px;height: 1000px;margin:0;padding:0;border:1px solid blue"></canvas>
+
