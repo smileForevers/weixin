@@ -62,7 +62,7 @@ Page({
         name:'巷子里的猫',
         time:'5分钟前',
         con_tit:'草莓奶油蛋糕',
-        canvas_id:'canvasCon',
+        canvas_id:'recommend_id0',
         canvas_text:'心得',
         canvas_color:'#fa6175',
         con_img:['../image/index/rank_con.jpg','../image/index/rank_con2.jpg','../image/index/rank_con3.jpg'],
@@ -90,7 +90,7 @@ Page({
         name:'梨子酱',
         time:'20分钟前',
         con_tit:'第一次做',
-        canvas_id:'canvasCon2',
+        canvas_id:'recommend_id1',
         canvas_text:'创作',
         canvas_color:'#00b7f0',
         con_img:['../image/index/rank_con4.jpg','../image/index/rank_con5.jpg','../image/index/rank_con6.jpg'],
@@ -120,7 +120,7 @@ Page({
         name:'梨子酱',
         time:'20分钟前',
         con_tit:'第一次做',
-        canvas_id:'canvasCon2',
+        canvas_id:'hot_id0',
         canvas_text:'创作',
         canvas_color:'#00b7f0',
         con_img:['../image/index/rank_con4.jpg','../image/index/rank_con5.jpg','../image/index/rank_con6.jpg'],
@@ -142,41 +142,13 @@ Page({
           }
         ]
       },
-        {
+      {
           tag:'#fa6175',
           image:'../image/index/rank_logo.jpg',
           name:'巷子里的猫',
           time:'5分钟前',
           con_tit:'草莓奶油蛋糕',
-          canvas_id:'canvasCon3',
-          canvas_text:'心得',
-          canvas_color:'#fa6175',
-          con_img:['../image/index/rank_con.jpg','../image/index/rank_con2.jpg','../image/index/rank_con3.jpg'],
-          text:'在自家阳台专门划出一小部分空间作为“烘焙区”，每逢周末，我都亲手做一份蛋糕或甜点。“因为自己烘焙的蛋糕倾注了感情，所以更有意义。',
-          friend:['../image/index/rank_f.jpg','../image/index/rank_f2.jpg','../image/index/rank_f3.jpg','../image/index/rank_f4.jpg'],
-          see_img:'../image/index/see.jpg',
-          see_num:'6823',
-          bottom:[{
-            img:'../image/index/save.jpg',
-            txt:'312'
-          },
-            {
-              img:'../image/index/love.jpg',
-              txt:'675'
-            },
-            {
-              img:'../image/index/comment.jpg',
-              txt:'65'
-            }
-          ]
-        },
-        {
-          tag:'#fa6175',
-          image:'../image/index/rank_logo.jpg',
-          name:'巷子里的猫',
-          time:'5分钟前',
-          con_tit:'草莓奶油蛋糕',
-          canvas_id:'canvasCon4',
+          canvas_id:'hot_id1',
           canvas_text:'心得',
           canvas_color:'#fa6175',
           con_img:['../image/index/rank_con.jpg','../image/index/rank_con2.jpg','../image/index/rank_con3.jpg'],
@@ -206,7 +178,7 @@ Page({
         name:'巷子里的猫',
         time:'5分钟前',
         con_tit:'草莓奶油蛋糕',
-        canvas_id:'canvasCon',
+        canvas_id:'new_id0',
         canvas_text:'心得',
         canvas_color:'#fa6175',
         con_img:['../image/index/rank_con7.jpg','../image/index/rank_con8.jpg','../image/index/rank_con9.jpg'],
@@ -234,7 +206,7 @@ Page({
         name:'梨子酱',
         time:'20分钟前',
         con_tit:'第一次做',
-        canvas_id:'canvasCon2',
+        canvas_id:'new_id1',
         canvas_text:'创作',
         canvas_color:'#00b7f0',
         con_img:['../image/index/rank_con4.jpg','../image/index/rank_con5.jpg','../image/index/rank_con6.jpg'],
@@ -292,25 +264,41 @@ Page({
   onLoad: function () {
 
     util.canvas();
-    let canvasArc = [];
-    let data = this.data.recommend;
-    for(let i=0;i<data.length;i++){
-      canvasArc[i] = {};
-      canvasArc[i].id = data[i].canvas_id;
-      canvasArc[i].color = data[i].tag;
-    }
-    this.setData({
-      canvasArc:canvasArc
-    })
+
+    let recommend = this.data.recommend;
+    let hot = this.data.hot;
+    let new = this.data.new;
+    fn(recommend);
+    fn(hot);
+    fn(new);
     // console.log(this.data.canvasArc)
-    util.canvasArc(this.data.canvasArc);
+    var types = ['recommend', 'hot', 'new'];
+      for (var i = 0; i < types.length; ++i) {
+          (function(type) {
+              pageObject[type] = function(e) {
+                  var key = type + 'Size'
+                  var changedData = {}
+                  changedData[key] =
+                      this.data[key] === 'default' ? 'mini' : 'default'
+                  this.setData(changedData)
+              }
+          })(types[i])
+        function fn(type[i])
+      }
 
-    //connect
-    for(let i=0;i<data.length;i++){
-      this.line('connect'+[i])
-    }
-
+  function fn(data){
+      let canvasArc = [];
+      for(let i=0;i<data.length;i++){
+          canvasArc[i] = {};
+          canvasArc[i].id = data[i].canvas_id;
+          canvasArc[i].color = data[i].tag;
+      }
+      util.canvasArc(canvasArc);
+      //connect
+      this.line('canvasArc'+[i]);
+  }
 
 
   }
+
 });
