@@ -132,10 +132,12 @@ $pink:#fa6175;
         text-align:center;
         line-height:38rpx;
         height:38rpx;
-        margin-right:60rpx;
-        border-bottom:3px solid #fff;
+        padding-right:60rpx;
+        view{
+            border-bottom:3px solid #fff;
+        }
     }
-    .nav-hover{
+    .nav-hover view{
         border-bottom-color: #fa6175;
     }
 }

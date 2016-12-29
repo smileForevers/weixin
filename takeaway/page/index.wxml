@@ -52,11 +52,11 @@
 	<view class="rank">
 		<view class="rank-nav" >
 			<block wx:for-items="{{item}}">
-				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}" bindtap="navClick">{{item.name}}</navigator>
+				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}" bindtap="navClick"><view>{{item.name}}</view></navigator>
 			</block>
 		</view>
 		<view class="rank_con">
-			<view class="recommend">
+			<view class="recommend {{on ? hide : hide}}" >
 				<block wx:for-items="{{recommend}}">
 				<view class="item">
 					<view class="tit">
@@ -99,11 +99,111 @@
 							</block>
 						</view>
 						<view class="bottom_right">
-							<canvas canvas-id="connect" style="width: 54px;height:20px;"></canvas>
+							<canvas canvas-id="connect{{index}}" style="width: 54px;height:20px;"></canvas>
 						</view>
 					</view>
 				</view>
 				<view class="div"></view>
+				</block>
+			</view>
+			<view class="hot" >
+				<block wx:for-items="{{hot}}">
+					<view class="item">
+						<view class="tit">
+							<image src="{{item.image}}"></image>
+							<view class="right">
+								<text class="name">{{item.name}}</text>
+								<text class="time">{{item.time}}</text>
+							</view>
+						</view>
+						<view class="con">
+							<view class="con_tit">
+								<view class="con_left">{{item.con_tit}}</view>
+								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
+							</view>
+							<view class="con_img">
+								<block  wx:for-items="{{item.con_img}}">
+									<image src="{{item}}"></image>
+								</block>
+							</view>
+							<view class="text">
+								{{item.text}}
+							</view>
+							<view class="friend">
+								<view class="friend_left">
+									<block  wx:for-items="{{item.friend}}">
+										<image src="{{item}}"></image>
+									</block>
+									<text>...</text>
+								</view>
+								<view class="friend_right">
+									<image src="{{item.see_img}}"></image>
+									{{item.see_num}}人看过
+								</view>
+							</view>
+						</view>
+						<view class="bottom">
+							<view class="bottom_left">
+								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+									<image src="{{bottom.img}}"></image>{{bottom.txt}}
+								</block>
+							</view>
+							<view class="bottom_right">
+								<canvas canvas-id="connect{{index}}" style="width: 54px;height:20px;"></canvas>
+							</view>
+						</view>
+					</view>
+					<view class="div"></view>
+				</block>
+			</view>
+			<view class="new">
+				<block wx:for-items="{{new}}">
+					<view class="item">
+						<view class="tit">
+							<image src="{{item.image}}"></image>
+							<view class="right">
+								<text class="name">{{item.name}}</text>
+								<text class="time">{{item.time}}</text>
+							</view>
+						</view>
+						<view class="con">
+							<view class="con_tit">
+								<view class="con_left">{{item.con_tit}}</view>
+								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
+							</view>
+							<view class="con_img">
+								<block  wx:for-items="{{item.con_img}}">
+									<image src="{{item}}"></image>
+								</block>
+							</view>
+							<view class="text">
+								{{item.text}}
+							</view>
+							<view class="friend">
+								<view class="friend_left">
+									<block  wx:for-items="{{item.friend}}">
+										<image src="{{item}}"></image>
+									</block>
+									<text>...</text>
+								</view>
+								<view class="friend_right">
+									<image src="{{item.see_img}}"></image>
+									{{item.see_num}}人看过
+								</view>
+							</view>
+						</view>
+						<view class="bottom">
+							<view class="bottom_left">
+								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+									<image src="{{bottom.img}}"></image>{{bottom.txt}}
+								</block>
+							</view>
+							<view class="bottom_right">
+								<canvas canvas-id="connect{{index}}" style="width: 54px;height:20px;"></canvas>
+							</view>
+						</view>
+					</view>
+					<view class="div"></view>
 				</block>
 			</view>
 		</view>

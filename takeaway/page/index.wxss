@@ -6,6 +6,9 @@ page {
 a {
   -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
 
+.hide {
+  display: none; }
+
 navigator {
   color: #a6876b; }
 
@@ -181,9 +184,10 @@ navigator:visited {
     text-align: center;
     line-height: 38rpx;
     height: 38rpx;
-    margin-right: 60rpx;
-    border-bottom: 3px solid #fff; }
-  .rank-nav .nav-hover {
+    padding-right: 60rpx; }
+    .rank-nav navigator view {
+      border-bottom: 3px solid #fff; }
+  .rank-nav .nav-hover view {
     border-bottom-color: #fa6175; }
 
 .rank_con {
