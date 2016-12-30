@@ -19,41 +19,44 @@ function footer(){
   return [
     {
       id:1,
-      image:"../image/index.jpg",
-      imageActive:"../image/index_active.jpg",
+      image:"/image/index.jpg",
+      imageActive:"/image/index_active.jpg",
       text:"首页",
       class:"item",
-      on:true
+      url:"../index/index",
+      open:true
     },
     {
       id:2,
-      image:"../image/find.jpg",
-      imageActive:"../image/find-active.jpg",
+      image:"/image/find.jpg",
+      imageActive:"/image/find_active.jpg",
       text:"发现",
       class:"item",
-      on:false
+      url:"../find/find",
+      open:false
     },
     {
       id:3,
-      image:"../image/photo.jpg",
+      image:"/image/photo.jpg",
       text:"",
       class:"item-center",
-      on:false
+      open:false
     },
     {
       id:4,
-      image:"../image/notice.jpg",
-      imageActive:"../image/index-active.jpg",
+      image:"/image/notice.jpg",
+      imageActive:"/image/notice_active.jpg",
       text:"消息",
       class:"item",
-      on:false
+      open:false
     },
     {
       id:5,
-      image:"../image/person.jpg",
+      image:"/image/person.jpg",
+      imageActive:"/image/person_active.jpg",
       text:"我的",
       class:"item",
-      on:false
+      open:false
     }
   ]
 }
@@ -74,6 +77,20 @@ function canvas (){
   ctx.draw()
 
 }
+
+function clickTab(item,id){
+
+  for(var i = 0,len = item.length;i<len;i++){
+    if( item[i].id != id ){
+      item[i].open = false ;
+    }else{
+      item[i].open = true ;
+    }
+
+  }
+  return item
+}
+
 function canvasArc (canvas){
   // console.log(canvas)
   for(let i=0;i<canvas.length;i++){
@@ -89,9 +106,12 @@ function canvasArc (canvas){
   }
 
 }
+
+
 module.exports = {
   footer:footer(),
   canvas:canvas,
   canvasArc:canvasArc,
-  formatTime: formatTime
+  formatTime: formatTime,
+  clickTab:clickTab
 }
