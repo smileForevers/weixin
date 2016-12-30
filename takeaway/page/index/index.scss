@@ -1,0 +1,234 @@
+////common
+@import "../../app.scss";
+
+//color
+$grey:#f5f5f5;
+$grey1:#d1d1d1;
+$brown:#a6876b;
+$brown1:#6b3906;
+$pink:#fa6175;
+
+/*container*/
+.container{
+    //box-sizing:border-box;
+    //height:100%;
+    //padding-bottom:164px;
+    //overflow:auto;
+    //margin-bottom:90px;
+}
+/*banner*/
+.banner{
+    position:relative;
+    overflow: hidden;
+}
+.scroll-view_H{
+    white-space: nowrap;
+}
+.banner swiper{
+    height:360rpx;
+}
+.banner image{
+    width:100%;
+    height:360rpx;
+}
+
+/*sub-nav*/
+.sub-nav{
+    position: relative;
+    overflow: hidden;
+    padding-bottom:24rpx;
+    navigator{
+        position: relative;
+        float: left;
+        padding: 30rpx 10rpx 6rpx;
+        width: 25%;
+        box-sizing: border-box;
+        view{
+            margin: 0 auto;
+            width:86rpx;
+            height: 86rpx;
+            background-size:cover!important;
+        }
+        text{
+            margin-top: 10rpx;
+            display: block;
+            text-align: center;
+            color: #000000;
+            font-size: 26rpx;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+    }
+}
+.item1 view{
+    background-image:url(../../image/index/icon1.jpg);
+}
+.item2 view{
+    background-image:url(../../image/index/icon2.jpg);
+}
+.item3 view{
+    background-image:url(../../image/index/icon3.jpg);
+}
+.item4 view{
+    background-image:url(../../image/index/icon4.jpg);
+}
+.item5 view{
+    background-image:url(../../image/index/icon5.jpg);
+}
+.item6 view{
+    background-image:url(../../image/index/icon6.jpg);
+}
+.item7 view{
+    background-image:url(../../image/index/icon7.jpg);
+}
+.item8 view{
+    background-image:url(../../image/index/icon8.jpg);
+}
+.item1:active view{
+    background-image:url(../../image/index/icon1_active.jpg);
+}
+.item2:active view{
+    background-image:url(../../image/index/icon2_active.jpg);
+}
+.item3:active view{
+    background-image:url(../../image/index/icon3_active.jpg);
+}
+.item4:active view{
+    background-image:url(../../image/index/icon4_active.jpg);
+}
+.item5:active view{
+    background-image:url(../../image/index/icon5_active.jpg);
+}
+.item6:active view{
+    background-image:url(../../image/index/icon6_active.jpg);
+}
+.item7:active view{
+    background-image:url(../../image/index/icon7_active.jpg);
+}
+.item8:active view{
+    background-image:url(../../image/index/icon8_active.jpg);
+}
+//rank
+.rank{
+    position:relative;
+    margin-bottom:46px;
+}
+.rank-nav{
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    width: 100%;
+    height:68rpx;
+    z-index:100;
+    padding-left:50rpx;
+    &:after{
+        @include line (bottom,#f5f5f5)
+    }
+    navigator{
+        text-align:center;
+        line-height:38rpx;
+        height:38rpx;
+        padding-right:60rpx;
+        view{
+            border-bottom:3px solid #fff;
+        }
+    }
+    .nav-hover view{
+        border-bottom-color: #fa6175;
+    }
+}
+
+.rank_con{
+    padding-top:68rpx;
+    .item{
+        padding:0 50rpx;
+    }
+    .tit{
+        display: flex;
+        padding-top:26rpx;
+        image{
+            width:60rpx;
+            height:60rpx;
+            border-radius: 30rpx;
+        }
+        .right{
+            display:flex;
+            flex-direction: column;
+            padding-left:20rpx;
+            .name{
+                color:#fa6173;
+            }
+            .time{
+                color:#d1d1d1;
+                font-size:20rpx;
+            }
+        }
+    }
+    .con{
+        background-color: #f5f5f5;
+        padding:0 20rpx;
+        margin-top:16rpx;
+        .con_tit{
+            @include flex;
+            height:90rpx;
+        }
+        .con_left{
+            font-size:28rpx;
+            color:$brown1;
+        }
+        .con_right{
+            color:$brown;
+            @include flex;
+
+            text{
+                padding-left:8rpx;
+            }
+        }
+        .con_img{
+            @include flex;
+            image{
+                width:190rpx;
+                height:190rpx;
+            }
+        }
+        .text{
+            padding-top:14rpx;
+            color:$brown;
+            line-height:36rpx;
+        }
+        .friend{
+            @include flex;
+            padding:20rpx 0;
+            color:$grey1;
+            .friend_left{
+                display: flex;
+                align-items: center;
+                image{
+                    width:40rpx;
+                    height:40rpx;
+                    padding-right:20rpx;
+                }
+            }
+            .friend_right{
+                image{
+                    width:26rpx;
+                    height:22rpx;
+                }
+            }
+        }
+    }
+    .bottom{
+        height:82rpx;
+        @include flex();
+        color:$grey1;
+        image{
+            width:26rpx;
+            height:22rpx;
+            padding:0 14rpx;
+        }
+    }
+}

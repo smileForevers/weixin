@@ -1,0 +1,8 @@
+<viwe class="container">
+	find
+</viwe>
+
+<!--footer-->
+<import src="../common/footer.wxml"/>
+<template is="footer"  data="{{footer:footer}}"/>
+

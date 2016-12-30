@@ -1,0 +1,223 @@
+<viwe class="container">
+	<view class="banner">
+		<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+		        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{banner}}">
+				<swiper-item>
+					<navigator id="{{item.id}}" class="scroll-view-item_H" >
+						<image src="{{item.src}}" />
+					</navigator>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!--次导航-->
+	<view class="sub-nav">
+		<navigator  redirect class="item1">
+			<view></view>
+			<text>蛋糕</text>
+		</navigator>
+		<navigator  redirect  class="item2">
+			<view></view>
+			<text>饼干</text>
+		</navigator>
+		<navigator  redirect  class="item3">
+			<view></view>
+			<text>面包</text>
+		</navigator>
+		<navigator  redirect class="item4">
+			<view></view>
+			<text>冰淇淋</text>
+		</navigator>
+		<navigator  redirect  class="item5">
+			<view></view>
+			<text>糖果</text>
+		</navigator>
+		<navigator  redirect  class="item6">
+			<view></view>
+			<text>果汁</text>
+		</navigator>
+		<navigator  redirect  class="item7">
+			<view></view>
+			<text>零食</text>
+		</navigator>
+		<navigator  redirect  class="item8">
+			<view></view>
+			<text>更多</text>
+		</navigator>
+	</view>
+	<!--div-->
+	<view class="div"></view>
+	<!--排行-->
+	<view class="rank">
+		<view class="rank-nav" >
+			<block wx:for-items="{{item}}">
+				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}" bindtap="navClick"><view>{{item.name}}</view></navigator>
+			</block>
+		</view>
+		<view class="rank_con">
+			<block wx:if="{{on==1}}">
+			<view class="recommend" >
+				<block wx:for-items="{{recommend}}">
+				<view class="item">
+					<view class="tit">
+						<image src="{{item.image}}"></image>
+						<view class="right">
+							<text class="name">{{item.name}}</text>
+							<text class="time">{{item.time}}</text>
+						</view>
+					</view>
+					<view class="con">
+						<view class="con_tit">
+							<view class="con_left">{{item.con_tit}}</view>
+							<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
+						</view>
+						<view class="con_img">
+							<block  wx:for-items="{{item.con_img}}">
+								<image src="{{item}}"></image>
+							</block>
+						</view>
+						<view class="text">
+							{{item.text}}
+						</view>
+						<view class="friend">
+							<view class="friend_left">
+								<block  wx:for-items="{{item.friend}}">
+									<image src="{{item}}"></image>
+								</block>
+								<text>...</text>
+							</view>
+							<view class="friend_right">
+								<image src="{{item.see_img}}"></image>
+								{{item.see_num}}人看过
+							</view>
+						</view>
+					</view>
+					<view class="bottom">
+						<view class="bottom_left">
+							<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+							<image src="{{bottom.img}}"></image>{{bottom.txt}}
+							</block>
+						</view>
+						<view class="bottom_right">
+							<canvas canvas-id="{{item.canvas_botid}}" style="width: 54px;height:20px;"></canvas>
+						</view>
+					</view>
+				</view>
+				<view class="div"></view>
+				</block>
+			</view>
+			</block>
+			<block wx:elif="{{on==2}}">
+			<view class="hot" >
+				<block wx:for-items="{{hot}}">
+					<view class="item">
+						<view class="tit">
+							<image src="{{item.image}}"></image>
+							<view class="right">
+								<text class="name">{{item.name}}</text>
+								<text class="time">{{item.time}}</text>
+							</view>
+						</view>
+						<view class="con">
+							<view class="con_tit">
+								<view class="con_left">{{item.con_tit}}</view>
+								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
+							</view>
+							<view class="con_img">
+								<block  wx:for-items="{{item.con_img}}">
+									<image src="{{item}}"></image>
+								</block>
+							</view>
+							<view class="text">
+								{{item.text}}
+							</view>
+							<view class="friend">
+								<view class="friend_left">
+									<block  wx:for-items="{{item.friend}}">
+										<image src="{{item}}"></image>
+									</block>
+									<text>...</text>
+								</view>
+								<view class="friend_right">
+									<image src="{{item.see_img}}"></image>
+									{{item.see_num}}人看过
+								</view>
+							</view>
+						</view>
+						<view class="bottom">
+							<view class="bottom_left">
+								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+									<image src="{{bottom.img}}"></image>{{bottom.txt}}
+								</block>
+							</view>
+							<view class="bottom_right">
+								<canvas canvas-id="{{item.canvas_botid}}" style="width: 54px;height:20px;"></canvas>
+							</view>
+						</view>
+					</view>
+					<view class="div"></view>
+				</block>
+			</view>
+			</block>
+			<block wx:else>
+			<view class="new">
+				<block wx:for-items="{{new}}">
+					<view class="item">
+						<view class="tit">
+							<image src="{{item.image}}"></image>
+							<view class="right">
+								<text class="name">{{item.name}}</text>
+								<text class="time">{{item.time}}</text>
+							</view>
+						</view>
+						<view class="con">
+							<view class="con_tit">
+								<view class="con_left">{{item.con_tit}}</view>
+								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
+							</view>
+							<view class="con_img">
+								<block  wx:for-items="{{item.con_img}}">
+									<image src="{{item}}"></image>
+								</block>
+							</view>
+							<view class="text">
+								{{item.text}}
+							</view>
+							<view class="friend">
+								<view class="friend_left">
+									<block  wx:for-items="{{item.friend}}">
+										<image src="{{item}}"></image>
+									</block>
+									<text>...</text>
+								</view>
+								<view class="friend_right">
+									<image src="{{item.see_img}}"></image>
+									{{item.see_num}}人看过
+								</view>
+							</view>
+						</view>
+						<view class="bottom">
+							<view class="bottom_left">
+								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+									<image src="{{bottom.img}}"></image>{{bottom.txt}}
+								</block>
+							</view>
+							<view class="bottom_right">
+								<canvas canvas-id="{{item.canvas_botid}}" style="width: 54px;height:20px;"></canvas>
+							</view>
+						</view>
+					</view>
+					<view class="div"></view>
+				</block>
+			</view>
+			</block>
+		</view>
+
+	</view>
+</viwe>
+
+<!--footer-->
+<import src="../common/footer.wxml"/>
+<template is="footer"  data="{{footer:footer}}"/>
+
