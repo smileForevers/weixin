@@ -2,7 +2,7 @@
 	<view class="banner">
 		<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
 		        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-			<block wx:for="{{banner}}">
+			<block wx:for="{{banner}}" wx:key="this">
 				<swiper-item>
 					<navigator id="{{item.id}}" class="scroll-view-item_H" >
 						<image src="{{item.src}}" />
@@ -51,14 +51,14 @@
 	<!--排行-->
 	<view class="rank">
 		<view class="rank-nav" >
-			<block wx:for-items="{{item}}">
+			<block wx:for-items="{{item}}" wx:key="this">
 				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}" bindtap="navClick"><view>{{item.name}}</view></navigator>
 			</block>
 		</view>
 		<view class="rank_con">
 			<block wx:if="{{on==1}}">
 			<view class="recommend" >
-				<block wx:for-items="{{recommend}}">
+				<block wx:for-items="{{recommend}}"  wx:key="this">
 				<view class="item">
 					<view class="tit">
 						<image src="{{item.image}}"></image>
@@ -73,7 +73,7 @@
 							<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
 						</view>
 						<view class="con_img">
-							<block  wx:for-items="{{item.con_img}}">
+							<block  wx:for-items="{{item.con_img}}" wx:key="this">
 								<image src="{{item}}"></image>
 							</block>
 						</view>
@@ -82,7 +82,7 @@
 						</view>
 						<view class="friend">
 							<view class="friend_left">
-								<block  wx:for-items="{{item.friend}}">
+								<block  wx:for-items="{{item.friend}}" wx:key="this">
 									<image src="{{item}}"></image>
 								</block>
 								<text>...</text>
@@ -95,7 +95,7 @@
 					</view>
 					<view class="bottom">
 						<view class="bottom_left">
-							<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+							<block wx:for-items="{{item.bottom}}" wx:for-item="bottom" wx:key="this">
 							<image src="{{bottom.img}}"></image>{{bottom.txt}}
 							</block>
 						</view>
@@ -110,7 +110,7 @@
 			</block>
 			<block wx:elif="{{on==2}}">
 			<view class="hot" >
-				<block wx:for-items="{{hot}}">
+				<block wx:for-items="{{hot}}" wx:key="this">
 					<view class="item">
 						<view class="tit">
 							<image src="{{item.image}}"></image>
@@ -125,7 +125,7 @@
 								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
 							</view>
 							<view class="con_img">
-								<block  wx:for-items="{{item.con_img}}">
+								<block  wx:for-items="{{item.con_img}}" wx:key="this">
 									<image src="{{item}}"></image>
 								</block>
 							</view>
@@ -134,7 +134,7 @@
 							</view>
 							<view class="friend">
 								<view class="friend_left">
-									<block  wx:for-items="{{item.friend}}">
+									<block  wx:for-items="{{item.friend}}" wx:key="this">
 										<image src="{{item}}"></image>
 									</block>
 									<text>...</text>
@@ -147,7 +147,7 @@
 						</view>
 						<view class="bottom">
 							<view class="bottom_left">
-								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom" wx:key="this">
 									<image src="{{bottom.img}}"></image>{{bottom.txt}}
 								</block>
 							</view>
@@ -162,7 +162,7 @@
 			</block>
 			<block wx:else>
 			<view class="new">
-				<block wx:for-items="{{new}}">
+				<block wx:for-items="{{new}}" wx:key="this">
 					<view class="item">
 						<view class="tit">
 							<image src="{{item.image}}"></image>
@@ -177,7 +177,7 @@
 								<view class="con_right"><canvas style="width:12px;height:12px" canvas-id="{{item.canvas_id}}"></canvas><text>{{item.canvas_text}}</text></view>
 							</view>
 							<view class="con_img">
-								<block  wx:for-items="{{item.con_img}}">
+								<block  wx:for-items="{{item.con_img}}" wx:key="this">
 									<image src="{{item}}"></image>
 								</block>
 							</view>
@@ -186,7 +186,7 @@
 							</view>
 							<view class="friend">
 								<view class="friend_left">
-									<block  wx:for-items="{{item.friend}}">
+									<block  wx:for-items="{{item.friend}}" wx:key="this">
 										<image src="{{item}}"></image>
 									</block>
 									<text>...</text>
@@ -199,7 +199,7 @@
 						</view>
 						<view class="bottom">
 							<view class="bottom_left">
-								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom">
+								<block wx:for-items="{{item.bottom}}" wx:for-item="bottom" wx:key="this">
 									<image src="{{bottom.img}}"></image>{{bottom.txt}}
 								</block>
 							</view>

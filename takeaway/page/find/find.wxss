@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 64px; }
+  .container image, .container navigator {
+    width: 710rpx;
+    height: 320rpx; }
+  .container navigator {
+    padding-top: 20rpx; }
+
+/*# sourceMappingURL=find.wxss.map */

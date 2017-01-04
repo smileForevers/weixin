@@ -1,20 +1,43 @@
-function formatTime(time) {
-  if (typeof time !== 'number' || time < 0) {
-    return time
-  }
-
-  var hour = parseInt(time / 3600)
-  time = time % 3600
-  var minute = parseInt(time / 60)
-  time = time % 60
-  var second = time
-
-  return ([hour, minute, second]).map(function (n) {
-    n = n.toString()
-    return n[1] ? n : '0' + n
-  }).join(':')
+//canvas
+function canvas (){
+  const ctx = wx.createCanvasContext('myCanvas')
+  // console.log(ctx);
+  ctx.arc(26, 30, 30, 0, 2 * Math.PI)
+  ctx.setFillStyle('#ffffff')
+  ctx.fill()
+  ctx.closePath()
+  ctx.beginPath()
+  ctx.arc(26, 30, 26, 0, 2 * Math.PI)
+  ctx.setFillStyle('#fa6175')
+  ctx.fill()
+  ctx.closePath()
+  ctx.draw()
 }
-//footer
+function canvasArc (canvas){
+  for(let i=0;i<canvas.length;i++){
+      const ctx = wx.createCanvasContext(canvas[i].id)
+      console.log(ctx);
+      ctx.arc(6, 6, 4, 0, 2 * Math.PI)
+      ctx.setStrokeStyle(canvas[i].color)
+      ctx.setLineWidth(2)
+      ctx.stroke()
+      ctx.draw()
+  }
+}
+
+
+//tab切换
+function clickTab(item,id){
+  for(var i = 0,len = item.length;i<len;i++){
+    if( item[i].id != id ){
+      item[i].open = false ;
+    }else{
+      item[i].open = true ;
+    }
+  }
+  return item
+}
+//footer 数据
 function footer(){
   return [
     {
@@ -23,7 +46,7 @@ function footer(){
       imageActive:"/image/index_active.jpg",
       text:"首页",
       class:"item",
-      url:"../index/index",
+      url:"../index/index?id=1",
       open:true
     },
     {
@@ -32,7 +55,7 @@ function footer(){
       imageActive:"/image/find_active.jpg",
       text:"发现",
       class:"item",
-      url:"../find/find",
+      url:"../find/find?id=2",
       open:false
     },
     {
@@ -48,6 +71,7 @@ function footer(){
       imageActive:"/image/notice_active.jpg",
       text:"消息",
       class:"item",
+      url:"../notice/notice?id=4",
       open:false
     },
     {
@@ -56,62 +80,25 @@ function footer(){
       imageActive:"/image/person_active.jpg",
       text:"我的",
       class:"item",
+      url:"../person/person?id=5",
       open:false
     }
   ]
 }
-
-//canvas
-function canvas (){
-  const ctx = wx.createCanvasContext('myCanvas')
-  // console.log(ctx);
-  ctx.arc(26, 30, 30, 0, 2 * Math.PI)
-  ctx.setFillStyle('#ffffff')
-  ctx.fill()
-  ctx.closePath()
-  ctx.beginPath()
-  ctx.arc(26, 30, 26, 0, 2 * Math.PI)
-  ctx.setFillStyle('#fa6175')
-  ctx.fill()
-  ctx.closePath()
-  ctx.draw()
-
+//footer  跳转
+function navigator (option,that){
+  canvas();
+  let footer = clickTab(that.data.footer,option.id);
+  that.setData({
+    footer:footer
+  })
 }
 
-function clickTab(item,id){
-
-  for(var i = 0,len = item.length;i<len;i++){
-    if( item[i].id != id ){
-      item[i].open = false ;
-    }else{
-      item[i].open = true ;
-    }
-
-  }
-  return item
-}
-
-function canvasArc (canvas){
-  // console.log(canvas)
-  for(let i=0;i<canvas.length;i++){
-    // for(let[key,value] of canvas[i]){
-      const ctx = wx.createCanvasContext(canvas[i].id)
-      console.log(ctx);
-      ctx.arc(6, 6, 4, 0, 2 * Math.PI)
-      ctx.setStrokeStyle(canvas[i].color)
-      ctx.setLineWidth(2)
-      ctx.stroke()
-      ctx.draw()
-    // }
-  }
-
-}
-
-
+//输出
 module.exports = {
   footer:footer(),
   canvas:canvas,
   canvasArc:canvasArc,
-  formatTime: formatTime,
-  clickTab:clickTab
+  clickTab:clickTab,
+  navigator:navigator
 }

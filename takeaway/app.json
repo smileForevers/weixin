@@ -1,7 +1,10 @@
 {
   "pages": [
     "page/index/index",
-    "page/find/find"
+    "page/find/find",
+    "page/notice/notice",
+    "page/person/person",
+    "page/product/product"
   ],
   "window": {
     "navigationBarTextStyle": "white",

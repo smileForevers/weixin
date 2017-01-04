@@ -2,14 +2,20 @@ var util = require('../../util/util.js');
 // console.log(util.footer)
 Page({
   data: {
-    footer:util.footer
+    footer:util.footer,
+    list:[
+      '../../image/find/1.jpg',
+      '../../image/find/2.jpg',
+      '../../image/find/3.jpg',
+      '../../image/find/1.jpg',
+      '../../image/find/2.jpg',
+      '../../image/find/3.jpg'
+    ]
   },
-  onLoad: function () {
-    util.canvas();
-    let footer = util.clickTab(this.data.footer,2);
-    this.setData({
-      footer:footer
-    })
+  onLoad: function (option) {
+    // console.log(option)
+    let that = this;
+    util.navigator(option,that)
   }
 
 

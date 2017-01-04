@@ -1,0 +1,15 @@
+.container{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  padding-bottom:64px;
+  image,navigator{
+    width:710rpx;
+    height:320rpx;
+
+  }
+  navigator{
+    padding-top:20rpx;
+  }
+}
+

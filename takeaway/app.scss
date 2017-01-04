@@ -1,14 +1,19 @@
-
 page{
   //background: green!important;
   position: relative;
   font-size:24rpx;
   font-family:"Microsoft Yahei";
-  
+}
+.container{
+  padding-top:64px;
 }
 //common
-a{-webkit-tap-highlight-color:rgba(255,0,0,0);}
-.hide{display: none;}
+a{
+  -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+.hide{
+  display: none;
+}
 navigator{
   color:#a6876b
 }
@@ -20,6 +25,7 @@ navigator:visited{
   opacity:1;
 }
 
+//minxin
 @mixin more{
   content: " ";
   display: inline-block;

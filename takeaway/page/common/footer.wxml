@@ -7,7 +7,7 @@
 					<image src="{{item.image}}"></image>
 				</div>
 			</navigator>
-			<navigator class="{{item.class}}" wx:else  bindtap="footerClick" id="{{item.id}}" url="{{item.url}}">
+			<navigator class="{{item.class}}" wx:else  bindtap="footerClick" id="{{item.id}}" redirect url="{{item.url}}">
 				<image src="{{item.open ? item.imageActive:item.image}}"></image>
 				<text>{{item.text}}</text>
 			</navigator>

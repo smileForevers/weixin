@@ -1,7 +1,5 @@
 <viwe class="container">
-	<navigator wx:for-items="{{list}}"  wx:key="this">
-		<image src="{{item}}"></image>
-	</navigator>
+	消息
 </viwe>
 
 <!--footer-->

@@ -3,6 +3,9 @@ page {
   font-size: 24rpx;
   font-family: "Microsoft Yahei"; }
 
+.container {
+  padding-top: 64px; }
+
 a {
   -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
 
