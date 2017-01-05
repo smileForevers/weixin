@@ -3,6 +3,29 @@
 </viwe>
 
 <!--footer-->
-<import src="../common/footer.wxml"/>
-<template is="footer"  data="{{footer:footer}}"/>
+<view class="page-footer product-footer">
+	<view class="cart-left">
+		<view class="arc" id="showIOSActionSheet">
+			<image src="../../image/product/cart.png"></image>
+			<text class="num">0</text>
+		</view>
+		<view class="money">￥0</view>
+	</view>
+	<view class="cart-right">去结算</view>
+</view>
 
+<!--BEGIN actionSheet-->
+<div>
+	<div class="weui-mask" id="iosMask" style="display: none"></div>
+	<div class="weui-actionsheet" id="iosActionsheet">
+		<div class="weui-actionsheet__menu">
+			<div class="weui-actionsheet__cell">示例菜单</div>
+			<div class="weui-actionsheet__cell">示例菜单</div>
+			<div class="weui-actionsheet__cell">示例菜单</div>
+			<div class="weui-actionsheet__cell">示例菜单</div>
+		</div>
+		<div class="weui-actionsheet__action">
+			<div class="weui-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+		</div>
+	</div>
+</div>

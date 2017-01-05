@@ -13,35 +13,35 @@
 	</view>
 	<!--次导航-->
 	<view class="sub-nav">
-		<navigator  redirect class="item1">
+		<navigator   class="item1"  url="../product/product">
 			<view></view>
 			<text>蛋糕</text>
 		</navigator>
-		<navigator  redirect  class="item2">
+		<navigator    class="item2"  url="../product/product">
 			<view></view>
 			<text>饼干</text>
 		</navigator>
-		<navigator  redirect  class="item3">
+		<navigator    class="item3"  url="../product/product">
 			<view></view>
 			<text>面包</text>
 		</navigator>
-		<navigator  redirect class="item4">
+		<navigator   class="item4"  url="../product/product">
 			<view></view>
 			<text>冰淇淋</text>
 		</navigator>
-		<navigator  redirect  class="item5">
+		<navigator    class="item5"  url="../product/product">
 			<view></view>
 			<text>糖果</text>
 		</navigator>
-		<navigator  redirect  class="item6">
+		<navigator    class="item6"  url="../product/product">
 			<view></view>
 			<text>果汁</text>
 		</navigator>
-		<navigator  redirect  class="item7">
+		<navigator    class="item7"  url="../product/product">
 			<view></view>
 			<text>零食</text>
 		</navigator>
-		<navigator  redirect  class="item8">
+		<navigator    class="item8"  url="../product/product">
 			<view></view>
 			<text>更多</text>
 		</navigator>
@@ -52,7 +52,7 @@
 	<view class="rank">
 		<view class="rank-nav" >
 			<block wx:for-items="{{item}}" wx:key="this">
-				<navigator  redirect class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}" bindtap="navClick"><view>{{item.name}}</view></navigator>
+				<navigator   class="{{item.open ? 'nav-hover' : ''}}" id="{{item.id}}" bindtap="navClick"><view>{{item.name}}</view></navigator>
 			</block>
 		</view>
 		<view class="rank_con">

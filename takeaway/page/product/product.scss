@@ -1,1 +1,133 @@
+$pink:#f9455d;
+.product-footer{
+  align-items: center;
+  height:100rpx;
+  font-size:34rpx;
+  color:#fff;
+  .cart-left{
+    flex:1;
+    color:red;
+  }
+  .arc{
+    position:absolute;
+    left:40rpx;
+    top:-20rpx;
+    width:100rpx;
+    height:100rpx;
+    height:100rpx;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $pink;
+  }
+  image{
+    width:70rpx;
+    height:70rpx;
+  }
+  .num{
+    position: absolute;
+    top:-10rpx;
+    left:70rpx;
+    width:40rpx;
+    height:40rpx;
+    text-align: center;
+    line-height:40rpx;
+    border-radius: 50%;
+    background: orange;
+    color:#fff;
+  }
+  .money{
+    padding-left:160rpx;
+    color:red;
+  }
+  .cart-right{
+    width:140rpx;
+    height:78rpx;
+    line-height:78rpx;
+    text-align: center;
+    border-radius:16rpx;
+    margin-right:20rpx;
+    background-color:$pink ;
+  }
+}
 
+
+.weui-actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+  backface-visibility: hidden;
+  z-index: 5000;
+  width: 100%;
+  background-color: #efeff4;
+  transition: transform .3s;
+}
+.weui-actionsheet__menu {
+  background-color: #FFFFFF;
+}
+.weui-actionsheet__action {
+  margin-top: 6px;
+  background-color: #FFFFFF;
+}
+.weui-actionsheet__cell {
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+}
+.weui-actionsheet__cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.weui-actionsheet__cell:active {
+  background-color: #ececec;
+}
+.weui-actionsheet__cell:first-child:before {
+  display: none;
+}
+.weui-skin_android .weui-actionsheet {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  width: 274px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  background: transparent;
+  transition: transform .3s;
+}
+.weui-skin_android .weui-actionsheet__action {
+  display: none;
+}
+.weui-skin_android .weui-actionsheet__menu {
+  border-radius: 2px;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.weui-skin_android .weui-actionsheet__cell {
+  padding: 13px 24px;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+}
+.weui-skin_android .weui-actionsheet__cell:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.weui-skin_android .weui-actionsheet__cell:last-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.weui-actionsheet_toggle {
+  transform: translate(0, 0);
+}
