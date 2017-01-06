@@ -5,7 +5,7 @@
 <!--footer-->
 <view class="page-footer product-footer">
 	<view class="cart-left">
-		<view class="arc" id="showIOSActionSheet">
+		<view class="arc" id="showIOSActionSheet" bindtap="showIOSActionSheet">
 			<image src="../../image/product/cart.png"></image>
 			<text class="num">0</text>
 		</view>
@@ -17,7 +17,7 @@
 <!--BEGIN actionSheet-->
 <div>
 	<div class="weui-mask" id="iosMask" style="display: none"></div>
-	<div class="weui-actionsheet" id="iosActionsheet">
+	<div class="weui-actionsheet {{open ? 'weui-actionsheet_toggle':''}}" id="iosActionsheet">
 		<div class="weui-actionsheet__menu">
 			<div class="weui-actionsheet__cell">示例菜单</div>
 			<div class="weui-actionsheet__cell">示例菜单</div>

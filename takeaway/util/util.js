@@ -94,6 +94,9 @@ function navigator (option,that){
   })
 }
 
+
+
+
 //输出
 module.exports = {
   footer:footer(),
