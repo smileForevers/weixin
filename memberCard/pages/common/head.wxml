@@ -1,0 +1,17 @@
+<template name="head">
+	<view class="head" bindtap="bindHeadTap">
+		<view class="top">
+			<view class="top-left">
+				<image class="logo" src="../../image/logo.png"></image>
+				<view class="toptxt">
+					<text class="tit">便利店会员卡</text>
+					<text class="txt">会卡</text>
+				</view>
+			</view>
+			<view class="top-right" catchtap="catchCodeTap">
+				<image src="../../image/code.png"></image>
+			</view>
+		</view>
+		<view class="bot">4000 7283 8829</view>
+	</view>
+</template>

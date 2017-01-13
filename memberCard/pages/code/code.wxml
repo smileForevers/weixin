@@ -1,0 +1,7 @@
+<view class="code">
+	<image src="../../image/code.png" class="code-img"></image>
+	<view class="code-txt">4000 7283 8829</view>
+	<view class="code-btn">
+		<button type="primary" size="default">将会员卡添加到微信卡包</button>
+	</view>
+</view>

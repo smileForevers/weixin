@@ -1,0 +1,231 @@
+<!--index.wxml-->
+<scroll-view class="container {{open? 'active':''}}" style="height:{{windowHeight}}px" scroll-y="true" bindscrolltolower="pullUpLoad">
+	<!--head-->
+	<import src="../common/head.wxml"/>
+	<template is="head"/>
+
+	<!--message-->
+	<view class="message {{display?'':'hide'}}">
+		<view>
+			<text class="message-tit">积分</text>
+			<text class="message-txt">19928</text>
+		</view>
+		<view class="message-mid">
+			<text class="message-tit">储值</text>
+			<text class="message-txt">677</text>
+		</view>
+		<view>
+			<text class="message-tit">优惠券</text>
+			<text class="message-txt">5</text>
+		</view>
+	</view>
+
+	<!--list-->
+	<view class="list {{display?'':'hide'}}">
+		<view  bindtap="bindListTap" id="1" data-tit="特惠活动">
+			<text>特惠活动</text>
+			<text class="list-tap">点击有惊喜</text>
+		</view>
+		<view  bindtap="bindListTap" id="2" data-tit="购买记录">
+			<text>购买记录</text>
+			<text class="list-tap" >点击有惊喜</text>
+		</view>
+		<view  bindtap="bindListTap" id="3" data-tit="会员卡详情">
+			<text>会员卡详情</text>
+			<text class="list-tap" >点击有惊喜</text>
+		</view>
+		<view  bindtap="bindListTap" id="4" data-tit="附近门店">
+			<text>附近门店</text>
+			<text class="list-tap">点击有惊喜</text>
+		</view>
+	</view>
+	<block wx:if="{{list=='1'}}">
+		<!--activity-->
+		<view class="activity">
+			<view class="tit">本期活动</view>
+			<view class="sub-nav">
+				<view >
+					<image src="../../image/a1.png"></image>
+					<text>进口菠萝</text>
+				</view>
+				<view>
+					<image src="../../image/a2.png"></image>
+					<text>火龙果</text>
+				</view>
+				<view>
+					<image src="../../image/a3.png"></image>
+					<text>零食</text>
+				</view>
+				<view >
+					<image src="../../image/a4.png"></image>
+					<text>台湾芒果</text>
+				</view>
+				<view>
+					<image src="../../image/a5.png"></image>
+					<text>猕猴桃</text>
+				</view>
+				<view>
+					<image src="../../image/a6.png"></image>
+					<text>牛油果</text>
+				</view>
+				<view>
+					<image src="../../image/a7.png"></image>
+					<text>车厘子</text>
+				</view>
+				<view>
+					<image src="../../image/a8.png"></image>
+					<text>糖果</text>
+				</view>
+				<view>
+					<image src="../../image/a9.png"></image>
+					<text>蔬菜</text>
+				</view>
+			</view>
+		</view>
+	</block>
+	<block wx:elif="{{list=='2'}}">
+		<view class="shop-list">
+			<view class="shop-tit">购买记录</view>
+				<view class="shop-item item">
+					<view class="shop-top">
+						<view>付款金额</view>
+						<view class="shop-top-right">￥299.00</view>
+					</view>
+					<view class="shop-center">
+						<view>商品</view>
+						<view>数量</view>
+						<view>提货时间</view>
+					</view>
+					<view class="shop-bot">
+						<view>查  看</view>
+						<view class="shop-bot-right">提 货 码</view>
+					</view>
+				</view>
+				<view class="shop-item item">
+					<view class="shop-top">
+						<view>付款金额</view>
+						<view class="shop-top-right">￥299.00</view>
+					</view>
+					<view class="shop-center">
+						<view>商品</view>
+						<view>数量</view>
+						<view>提货时间</view>
+					</view>
+					<view class="shop-bot">
+						<view>查  看</view>
+						<view class="shop-bot-right">提 货 码</view>
+					</view>
+				</view>
+				<view class="shop-item item">
+					<view class="shop-top">
+						<view>付款金额</view>
+						<view class="shop-top-right">￥299.00</view>
+					</view>
+					<view class="shop-center">
+						<view>商品</view>
+						<view>数量</view>
+						<view>提货时间</view>
+					</view>
+					<view class="shop-bot">
+						<view>查  看</view>
+						<view class="shop-bot-right">提 货 码</view>
+					</view>
+				</view>
+		</view>
+		<view class="tips">
+			<view wx:if="{{hasMore}}">
+				<image src="../../image/loading.gif" mode="aspectFill"/>
+				<text>玩了命的加载中...</text>
+			</view>
+			<!--<view wx:else><text>没有更多内容了</text></view>-->
+		</view>
+		<loading hidden="{{loading}}">加载中...</loading>
+	</block>
+	<block wx:elif="{{list=='3'}}">
+		<view class="detail item">
+			<view class="detail-list">
+				<view class="detail-tit">特权说明</view>
+				<view class="detail-con">
+					<text>激活成功即赠送10积分</text>
+					<text>每次消费1元，赠送一积分</text>
+					<text>单次赠送上限200积分</text>
+				</view>
+			</view>
+			<view class="detail-list">
+				<view class="detail-tit">有效日期</view>
+				<view class="detail-con">
+					<text>永久有效</text>
+				</view>
+			</view>
+			<view class="detail-list">
+				<view class="detail-tit">电       话</view>
+				<view class="detail-con">
+					<text class="tel">13811616671</text>
+				</view>
+			</view>
+			<view class="detail-list">
+				<view class="detail-tit">使用须知</view>
+				<view class="detail-con">
+					<text>每人限领1张</text>
+				</view>
+			</view>
+		</view>
+	</block>
+	<block wx:elif="{{list=='4'}}">
+		<view class="near">
+			<view class="near-tit">
+				仅展示距离你最近的30家门店
+			</view>
+			<view class="near-list">
+				<view class="near-item item">
+					<view class="near-left">
+						<view class="near-left-top">
+							<view class="near-tit">中关村店</view>
+							<view class="near-con">12.8公里</view>
+						</view>
+						<view class="near-left-bot">
+							中关村大街甲15号新中关4层
+						</view>
+					</view>
+					<view class="near-right"></view>
+				</view>
+				<view class="near-item item">
+					<view class="near-left">
+						<view class="near-left-top">
+							<view class="near-tit">亮马桥店</view>
+							<view class="near-con">12.8公里</view>
+						</view>
+						<view class="near-left-bot">
+							中关村大街甲15号新中关4层
+						</view>
+					</view>
+					<view class="near-right"></view>
+				</view>
+				<view class="near-item item">
+					<view class="near-left">
+						<view class="near-left-top">
+							<view class="near-tit">望京店</view>
+							<view class="near-con">12.8公里</view>
+						</view>
+						<view class="near-left-bot">
+							中关村大街甲15号新中关4层
+						</view>
+					</view>
+					<view class="near-right"></view>
+				</view>
+				<view class="near-item item">
+					<view class="near-left">
+						<view class="near-left-top">
+							<view class="near-tit">大望路店</view>
+							<view class="near-con">12.8公里</view>
+						</view>
+						<view class="near-left-bot">
+							中关村大街甲15号新中关4层
+						</view>
+					</view>
+					<view class="near-right"></view>
+				</view>
+			</view>
+		</view>
+	</block>
+</scroll-view>

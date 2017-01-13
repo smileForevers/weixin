@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/code/code"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f7f7f7",
+    "navigationBarTitleText": "会员卡",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  }
+}

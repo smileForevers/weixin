@@ -1,0 +1,280 @@
+.hide {
+  display: none !important; }
+
+.item {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff; }
+
+page {
+  background-color: #f7f7f7;
+  font-family: "microsoft yahei";
+  font-size: 28rpx; }
+
+.head {
+  width: 650rpx;
+  height: 390rpx;
+  margin: 30rpx 50rpx 0;
+  padding: 16rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15rpx;
+  background-color: #66cc66;
+  color: white;
+  transition: 1s; }
+  .head .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .head .top-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+  .head .toptxt {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10rpx; }
+  .head .txt {
+    font-size: 20rpx; }
+  .head .logo {
+    width: 66rpx;
+    height: 66rpx; }
+  .head .top-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 20rpx;
+    background-color: #fff; }
+    .head .top-right image {
+      width: 66rpx;
+      height: 66rpx; }
+  .head .bot {
+    font-size: 28rpx;
+    font-weight: bold; }
+
+.code .code-img {
+  width: 390rpx;
+  height: 390rpx;
+  display: block;
+  margin: 100rpx auto 0; }
+.code .code-txt {
+  font-size: 36rpx;
+  font-weight: bold;
+  padding-top: 30rpx;
+  text-align: center; }
+.code .code-btn {
+  margin: 100rpx 20rpx 0; }
+  .code .code-btn button {
+    border-color: #09bb07;
+    font-size: 30rpx; }
+
+.message {
+  width: 100%;
+  height: 190rpx;
+  box-sizing: border-box;
+  padding: 60rpx 0 30rpx;
+  display: flex;
+  transition: 1s opacity,1s 1s height; }
+  .message view {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column; }
+  .message .message-mid {
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc; }
+  .message .message-tit {
+    font-size: 36rpx;
+    color: #666; }
+  .message .message-txt {
+    font-size: 40rpx;
+    color: #09bb07; }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  height: 460rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  transition: 1s opacity,1s 1s height; }
+  .list view {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 10rpx; }
+    .list view:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      border-top: 1px solid #666;
+      color: #d9d9d9;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5); }
+  .list .list-tap {
+    color: #ccc; }
+
+.active .head {
+  height: 200rpx; }
+.active .message, .active .list {
+  opacity: 0;
+  height: 0; }
+
+.activity .tit {
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 60rpx 0 30rpx; }
+
+.sub-nav {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 24rpx; }
+  .sub-nav view {
+    position: relative;
+    float: left;
+    padding: 30rpx 10rpx 6rpx;
+    width: 33.3%;
+    box-sizing: border-box; }
+    .sub-nav view image {
+      margin: 0 auto;
+      width: 86rpx;
+      height: 86rpx;
+      display: block; }
+    .sub-nav view text {
+      margin-top: 10rpx;
+      display: block;
+      text-align: center;
+      color: #000000;
+      font-size: 26rpx;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+
+.shop-list .shop-tit {
+  position: relative;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  margin-top: 60rpx;
+  color: #666; }
+.shop-list .shop-item {
+  margin-top: 40rpx;
+  color: #666; }
+.shop-list .shop-top {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  font-size: 30rpx;
+  line-height: 90rpx; }
+  .shop-list .shop-top:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    border-bottom: 1px solid #666;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); }
+.shop-list .shop-center {
+  line-height: 60rpx;
+  padding: 10rpx 0; }
+.shop-list .shop-top-right {
+  font-size: 44rpx;
+  color: #000; }
+.shop-list .shop-top, .shop-list .shop-center {
+  margin: 0 20rpx; }
+.shop-list .shop-bot {
+  position: relative;
+  display: flex; }
+  .shop-list .shop-bot:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    border-top: 1px solid #ccc;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); }
+  .shop-list .shop-bot view {
+    flex: 1;
+    text-align: center;
+    line-height: 70rpx; }
+.shop-list .shop-bot-right {
+  color: #66cc66;
+  border-left: 1px solid #ccc; }
+
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc; }
+
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx; }
+
+.tips image,
+.tips text {
+  vertical-align: middle; }
+
+.detail {
+  margin-top: 70rpx; }
+  .detail .detail-list {
+    display: flex;
+    padding: 10rpx 30rpx; }
+  .detail .detail-tit {
+    flex: 1;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    font-weight: bold;
+    color: #666; }
+  .detail .detail-con {
+    flex: 2;
+    font-size: 26rpx;
+    line-height: 50rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .detail .tel {
+    color: #66cc66; }
+
+.near {
+  padding-top: 70rpx; }
+  .near .near-tit {
+    text-align: center;
+    line-height: 50rpx; }
+
+.near-item {
+  display: flex;
+  padding: 0 20rpx;
+  color: #666; }
+  .near-item .near-left {
+    padding-right: 20rpx; }
+  .near-item .near-left-top {
+    display: flex;
+    justify-content: space-between; }
+  .near-item .near-tit {
+    font-size: 30rpx;
+    color: #000; }
+
+/*# sourceMappingURL=app.wxss.map */
